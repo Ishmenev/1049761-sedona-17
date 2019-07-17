@@ -1,0 +1,124 @@
+.advantages {
+    width: 320px;    
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.advantages__title--main {
+    .text-styles(16px);
+    margin: 0 auto;    
+    width: 230px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.advantages__anounce {
+    .text-styles(14px, @black);
+    margin: 0 auto;
+    width: 255px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.advantages__list {
+    .list-reset;
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages__wrapper {
+    background-color: @blue;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    .text-styles(14px, @white);
+    &--first {
+        padding-top: 60px;
+        padding-bottom: 45px;
+        position: relative;
+        &::before {
+            .alter;
+            top: 0;
+            left: 0;
+            .size(766px, 37px);
+            background-image: url(../img/bg-triangle.svg);         
+        }
+    }
+    &--second {
+        padding-top: 45px;
+        padding-bottom: 42px;
+    }
+}
+
+.offers-list {
+    .list-reset;
+}
+
+.offers-list__item {
+    .text-styles(14px);
+    padding-left: 69px;
+    padding-right: 40px;
+    position: relative;
+    &--houses {
+        padding-top: 35px;
+        &::before {
+            .alter;
+            top: 26px;
+            left: 20px;
+            .size(39px, 37px);
+            background-image: url(../img/icon-house.png);
+            background-repeat: no-repeat;
+
+        }
+    }
+    &--gifts {
+        padding-top: 20px;
+        &::before {
+            .alter;
+            top: 8px;
+            left: 20px;
+            .size(39px, 37px);
+            background-image: url(../img/icon-gift.png);
+            background-repeat: no-repeat;
+        }
+    }
+    &--food {
+        padding-top: 20px;
+        &::before {
+            .alter;
+            top: 10px;
+            left: 15px;
+            .size(39px, 37px);
+            background-image: url(../img/icon-burger.png);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.offers-list__title {
+    .text-styles(21px);
+    font-weight: bold;
+}
+
+.advantages__picture {
+    margin-bottom: -4px;
+}
+
+.advantages__item--third,
+.advantages__item--fourth,
+.advantages__item--fifth {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 37px;
+    padding-right: 37px;
+    background-color: rgb(238, 238, 238);
+    .text-styles(14px);
+    text-align: center;
+    position: relative;
+    &:not(.advantages__item--fifth)::after {
+        .alter;
+        bottom: 0;
+        .size(250px, 1px);
+        background-color: rgb(214, 214, 214);
+    } 
+}
