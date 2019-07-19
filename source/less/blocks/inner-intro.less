@@ -5,6 +5,7 @@
   padding-top: 52px;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 
   &::after {
     .alter;
@@ -21,5 +22,34 @@
     .size(320px, 26px);
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .inner-intro {
+    width: @tablet-width;
+    min-height: 301px;
+    padding-top: 101px;
+
+    &::after {
+      .alter;
+      bottom: 0;
+      left: 0;
+      .size(1200px, 518px);
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+      z-index: -1;
+    }
+
+    &::before {
+      .alter;
+      bottom: 0;
+      .size(1200px, 57px);
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .inner-intro__picture {
+    .size(461px, 80px);
   }
 }
