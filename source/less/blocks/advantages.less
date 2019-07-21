@@ -176,21 +176,23 @@
     padding-top: 45px;
     padding-bottom: 45px;
     box-sizing: border-box;
-
-    &--first {
-      padding-left: 47px;
-      padding-right: 47px;
-      &::before {
-        display: none;
-      }
-    }
-
-    &--second {
-      padding-left: 51px;
-      padding-right: 51px;
-      order: 1;
-    }
   }
+
+  .advantages__wrapper--first {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  .advantages__wrapper--first::before {
+    display: none;
+  }
+
+  .advantages__wrapper--second {
+    padding-left: 51px;
+    padding-right: 51px;
+    order: 1;
+  }
+
 
   .advantages__picture--tablet {
     display: block;
@@ -212,29 +214,30 @@
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
-    &--houses::before {
-      top: -45%;
-      left: 37%;
-      .size(75px, 72px);
-      background-image: url("../img/icon-house-tablet.png");
-      background-repeat: no-repeat;
-    }
+  }
 
-    &--food::before {
-      top: -59%;
-      left: 37%;
-      .size(77px, 68px);
-      background-image: url("../img/icon-burger-tablet.png");
-      background-repeat: no-repeat;
-    }
+  .offers-list__item--houses::before {
+    top: -45%;
+    left: 37%;
+    .size(75px, 72px);
+    background-image: url("../img/icon-house-tablet.png");
+    background-repeat: no-repeat;
+  }
 
-    &--gifts::before {
-      top: -65%;
-      left: 37%;
-      .size(64px, 75px);
-      background-image: url("../img/icon-gift-tablet.png");
-      background-repeat: no-repeat;
-    }
+  .offers-list__item--food::before {
+    top: -59%;
+    left: 37%;
+    .size(77px, 68px);
+    background-image: url("../img/icon-burger-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  .offers-list__item--gifts::before {
+    top: -65%;
+    left: 37%;
+    .size(64px, 75px);
+    background-image: url("../img/icon-gift-tablet.png");
+    background-repeat: no-repeat;
   }
 
   .advantages__item--wrapper {
@@ -249,9 +252,11 @@
     padding-bottom: 49px;
     padding-left: 58px;
     padding-right: 58px;
-    &:not(.advantages__item--fifth)::after {
-      display: none;
-    }
+  }
+
+  .advantages__item--third::after,
+  .advantages__item--fourth::after {
+    display: none;
   }
 
   .advantages__title--sub {
