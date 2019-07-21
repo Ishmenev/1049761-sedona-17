@@ -34,8 +34,13 @@
     top: 0;
     left: 0;
     .size(320px, 1px);
-    background-color: @grey;
+    background-color: rgb(234, 234, 234);
   }
+}
+
+.pictures__link--tablet,
+.pictures__link--desktop {
+  display: none;
 }
 
 .pictures__item {
@@ -50,14 +55,13 @@
     bottom: 0;
     left: 0;
     .size(320px, 1px);
-    background-color: @grey;
+    background-color: rgb(234, 234, 234);
   }
 }
 
 .pictures__sign {
-  .text-styles;
+  .text-styles(16px);
   margin: 0;
-  padding-top: 20px;
 }
 
 .pictures__author {
@@ -76,5 +80,138 @@
     .size(23px, 21px);
     background-image: url("../img/icon-like.svg");
     background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .pictures {
+    width: @tablet-width;
+    padding-top: 76px;
+  }
+
+  .pictures__title {
+    .text-styles(30px);
+  }
+
+  .pictures__intro {
+    width: 428px;
+    margin-bottom: 75px;
+  }
+
+  .pictures__item--first::before {
+    display: none;
+  }
+
+  .pictures__item {
+    padding: 0;
+    position: relative;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .pictures__link--tablet {
+    display: block;
+    margin-bottom: -4px;
+  }
+
+  .pictures__link--mobile {
+    display: none;
+  }
+
+  .pictures__wrapper {
+    background-color: rgb(242, 242, 242);
+    padding-left: 20px;
+    padding-right: 21px;
+    padding-top: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pictures__wrapper--road {
+    background-color: rgb(234, 234, 234);
+    padding-left: 20px;
+    padding-right: 21px;
+    padding-top: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pictures__sign {
+    flex-basis: 100%;
+  }
+
+  .picutes__likes {
+    margin-left: auto;
+  }
+
+  .pictures__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .pictures__item:not(.pictures__item--first) {
+    margin: 0;
+    padding: 0;
+    flex-basis: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pictures {
+    width: @desktop-width;
+    padding-top: 113px;
+  }
+
+  .pictures__link--desktop {
+    display: block;
+    margin-bottom: -4px;
+  }
+
+  .pictures__link--tablet {
+    display: none;
+  }
+
+  .pictures__list {
+    padding: 0;
+  }
+
+  .pictures__item {
+    position: relative;
+  }
+
+  .pictures__wrapper:not(.pictures__wrapper--road) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: @white;
+  }
+
+  .pictures__wrapper--road {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: @white;
+  }
+
+  .pictures__sign {
+    color: @white;
+  }
+
+  .picutes__likes {
+    color: @white;
+
+    &::before {
+      background-image: url("../img/icon-like-white.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
