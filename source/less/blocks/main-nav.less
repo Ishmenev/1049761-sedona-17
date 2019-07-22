@@ -1,6 +1,5 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
 }
 
 .main-nav__list {
@@ -27,10 +26,11 @@
 
 .main-nav__item--logo {
   display: block;
-  text-align: center;
   background-color: @white;
   height: 56px;
   position: relative;
+  text-align: center;
+  padding-left: 20px;
 }
 
 .main-nav__image--tablet,
@@ -52,16 +52,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav {
-    width: @tablet-width;
-  }
 
   .main-nav__list {
+    width: 95%;
+    margin: 0 auto;
     flex-direction: row;
   }
 
   .main-nav__item {
-    flex-basis: 153px;
+    flex-basis: 20%;
   }
 
   .main-nav__list li:nth-child(4) {
@@ -74,6 +73,7 @@
 
   .main-nav__image--tablet {
     display: block;
+    padding-left: 30px;
   }
 
   .main-nav__image--mobile {
@@ -97,6 +97,7 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: @desktop-width;
+    margin: 0 auto;
   }
 
   .main-nav__item {
