@@ -4,14 +4,12 @@
   text-align: center;
   padding-top: 90px;
   box-sizing: border-box;
-  position: relative;
-  
+  position: relative;  
 
   &::after {
     .alter;
     bottom: 0;
-    left: -224px;
-    .size(768px, 389px);
+    .size(318px, 389px);
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     z-index: -1;
@@ -20,7 +18,7 @@
   &::before {
     .alter;
     bottom: 0;
-    .size(720px, 26px);
+    .size(320px, 26px);
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
   }
@@ -30,6 +28,7 @@
   .page-intro {
     width: @tablet-width;
     min-height: 518px;
+    overflow: hidden;
 
     &::after {
       .alter;
