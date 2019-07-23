@@ -1,6 +1,4 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
 }
 
 .main-nav__list {
@@ -53,7 +51,8 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: @tablet-width;
+    width: auto;
+    margin: 0 auto;
   }
 
   .main-nav__list {
@@ -61,7 +60,12 @@
   }
 
   .main-nav__item {
-    flex-basis: 153px;
+    flex-basis: 20%;
+  }
+
+  .main-nav__item--logo {
+    padding-left: 40px;
+    box-sizing: border-box;
   }
 
   .main-nav__list li:nth-child(4) {
