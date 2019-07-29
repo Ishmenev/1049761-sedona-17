@@ -9,34 +9,127 @@
         <link rel="stylesheet" href="css/style.css">
       </head>
       <body>
-      <header class="main-header">
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="photo.html">Фото и видео</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-            <li class="main-nav__item main-nav__item--logo">
+        <header class="main-header">
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="./index.html">Главная</a>
+              </li>
+              <li class="main-nav__item main-nav__item--photos">
+                <a class="main-nav__link" href="./photo.html">Фото и видео</a>
+              </li>
+              <li class="main-nav__item main-nav__item--form">
+                <a class="main-nav__link main-nav__link--active" href="./form.html">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" target="_blank" href="https://htmlacademy.ru">HTML Academy</a>
+              </li>
+            </ul>
+            <div class="main-nav__menu">
               <a class="main-nav__logo" href="#">
-                <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+                <img class="main-nav__image--mobile" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+                <img class="main-nav__image--tablet" src="img/logo-sedona-tablet.svg" width="102" height="83" alt="Логотип Седона">
+                <img class="main-nav__image--desktop" src="img/logo-sedona-desktop.svg" width="188" height="96" alt="Логотип Седона">
               </a>
-              <button class="main-nav__toggle" type="button"></button>
-          </li>
-          </ul>
-        </nav>
-      </header>
+              <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            </div>
+          </nav>
+        </header>
       <main class="page-main--photo">
         <section class="inner-intro">
-            <img class="inner-intro__picture" src="img/text-sedona.svg" width="229" height="39" alt="Изображение Седоны">
+            <img class="inner-intro__text" src="img/text-sedona.svg" width="229" height="39" alt="Изображение Седоны">
           </section>
+          <section class="forms">
+            <h1 class="forms__title">Оставьте свой отзыв</h1>
+            <p class="forms__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            <form class="forms__menu" action="#" method="get">
+              <fieldset class="forms__border">
+                <legend class="forms__title">Представьтесь:</legend>
+                <ul class="forms__id">
+                  <li>
+                    <label class="forms__name">Имя*:
+                      <input type="text" name="user-name" required>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="forms__lastname">Фамилия*:
+                      <input type="text" name="user-lastname" required>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="forms__fathername">Отчество:
+                      <input type="text" name="user-fathertname">
+                    </label>
+                  </li>
+                </ul>
+                <legend class="forms__title">Контактная информация:</legend>
+                <ul class="forms__contacts">
+                  <li>
+                    <label class="forms__phone"> Контактный телефон*:
+                      <input type="tel" name="user-phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{10}" required>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="forms__email">Электронная почта*:
+                      <input type="email" name="user-email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </label>
+                  </li>
+                <legend class="forms__title">Ваше общее впечатление:</legend>
+                <ul class="forms__options">
+                    <li class="forms__choice">
+                      <label class="forms__opinion forms__opinion--satisfied">
+                        <input type="radio" name="user-opinion">
+                        <span class="forms__answer">Скорее положительное</span>
+                    </label>
+                  </li>
+                    <li class="forms__choice">
+                      <label class="forms__opinion forms__opinion--unsatisfied">
+                        <input type="radio" name="user-opinion">
+                        <span class="forms__answer">Скорее отрицательное</span>
+                    </label>
+                  </li>
+                    <li class="forms__choice">
+                      <label class="forms__opinion forms__opinion--noidea">
+                        <input type="radio" name="user-opinion">
+                        <span class="forms__answer">Затрудняюсь ответить</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <legend class="forms__title">Посещенные достопримечательности:</legend>
+                  <ul class="forms__list">
+                    <li class="forms__item">
+                      <label class="forms__place">
+                        <input type="checkbox" name="visited-place">
+                        <span class="forms__description">Мост Дьявола</span>
+                      </label>
+                    </li>
+                    <li class="forms__item">
+                      <label class="forms__place">
+                        <input type="checkbox" name="visited-place">
+                        <span class="forms__description">Гора-Колокол</span>
+                      </label>
+                    </li>
+                    <li class="forms__item">
+                      <label class="forms__place">
+                        <input type="checkbox" name="visited-place">
+                        <span class="forms__description">Слайд-парк</span>
+                      </label>
+                    </li>
+                    <li class="forms__item">
+                      <label class="forms__place">
+                        <input type="checkbox" name="visited-place">
+                        <span class="forms__description">Красные скалы</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <legend class="forms-title">Опишите свои эмоции:</legend>
+                  <textarea rows="8" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
+                </fieldset>
+                <input class="forms__button" type="submit" value="Отправить отзыв">
+                <span class="forms__requirements">*-обязательные поля</span>
+              </form>
+          </section>
+
         </main>
         <footer>
           <div class="footer-page">
@@ -49,5 +142,6 @@
           <a class="footer-page__sign" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на адрес HTML Академии">Разработано</a>
           </div>
         </footer>
+        <script src="js/script.js"></script>
       </body>
 </html>
