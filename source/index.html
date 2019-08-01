@@ -27,9 +27,11 @@
         </ul>
         <div class="main-nav__menu">
           <a class="main-nav__logo" href="#">
-            <img class="main-nav__image--mobile" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-            <img class="main-nav__image--tablet" src="img/logo-sedona-tablet.svg" width="102" height="83" alt="Логотип Седона">
-            <img class="main-nav__image--desktop" src="img/logo-sedona-desktop.svg" width="188" height="96" alt="Логотип Седона">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
@@ -49,10 +51,10 @@
               <span class="advantages__number">— №1 —</span>
               <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <div class="advantages__container">
-              <img class="advantages__picture--mobile" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Повседневные виды Седоны">
-              <img class="advantages__picture--tablet" src="img/main-city-tablet@1x.jpg" width="512" height="256" alt="Повседневные виды Седоны">
-              <img class="advantages__picture--desktop" src="img/main-city-desktop@1x.jpg" width="800" height="256" alt="Повседневные виды Седоны">
+            <div class="advantages__container advantages__container--town">
+              <picture>
+                <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Повседневные виды Седоны">
+              </picture>
             </div>
             <ul class="advantages__offers offers-list">
               <li class="offers-list__item offers-list__item--houses">
@@ -75,10 +77,10 @@
               <span class="advantages__number">— №2 —</span>
               <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <div class="advantages__container">
-              <img class="advantages__picture--mobile" src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Вид моста Дьявола в Седоне">
-              <img class="advantages__picture--tablet" src="img/photo-bridge-tablet@1x.jpg" width="512" height="256" alt="Вид моста Дьявола в Седоне">
-              <img class="advantages__picture--desktop" src="img/photo-bridge-desktop@1x.jpg" width="800" height="256" alt="Вид моста Дьявола в Седоне">
+            <div class="advantages__container advantages__container--bridge">
+              <picture>
+                <img class="advantages__picture advantages__picture--bridge" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Вид на мост Дьявола">
+              </picture>
             </div>
           </li>
           <li class="advantages__item advantages__item--wrapper">

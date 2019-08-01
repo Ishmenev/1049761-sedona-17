@@ -27,109 +27,149 @@
             </ul>
             <div class="main-nav__menu">
               <a class="main-nav__logo" href="#">
-                <img class="main-nav__image--mobile" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-                <img class="main-nav__image--tablet" src="img/logo-sedona-tablet.svg" width="102" height="83" alt="Логотип Седона">
-                <img class="main-nav__image--desktop" src="img/logo-sedona-desktop.svg" width="188" height="96" alt="Логотип Седона">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                  <img class="main-nav__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+                </picture>
               </a>
               <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>
           </nav>
         </header>
-      <main class="page-main--photo">
+      <main class="page-main--form">
         <section class="inner-intro">
             <img class="inner-intro__text" src="img/text-sedona.svg" width="229" height="39" alt="Изображение Седоны">
           </section>
           <section class="forms">
-            <h1 class="forms__title">Оставьте свой отзыв</h1>
+            <h1 class="forms__title forms__title--main">Оставьте свой отзыв</h1>
             <p class="forms__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
             <form class="forms__menu" action="#" method="get">
-              <fieldset class="forms__border">
-                <legend class="forms__title">Представьтесь:</legend>
-                <ul class="forms__id">
-                  <li>
-                    <label class="forms__name">Имя*:
-                      <input type="text" name="user-name" required>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="forms__lastname">Фамилия*:
-                      <input type="text" name="user-lastname" required>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="forms__fathername">Отчество:
-                      <input type="text" name="user-fathertname">
-                    </label>
-                  </li>
-                </ul>
-                <legend class="forms__title">Контактная информация:</legend>
-                <ul class="forms__contacts">
-                  <li>
-                    <label class="forms__phone"> Контактный телефон*:
-                      <input type="tel" name="user-phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{10}" required>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="forms__email">Электронная почта*:
-                      <input type="email" name="user-email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                    </label>
-                  </li>
-                <legend class="forms__title">Ваше общее впечатление:</legend>
-                <ul class="forms__options">
-                    <li class="forms__choice">
+              <div class="forms__list">
+                <div class="forms__item forms__item--id">
+                  <legend class="forms__title forms__title--id">Представьтесь:</legend>
+                  <ul class="forms__wrapper forms__wrapper--id">
+                    <li class="forms__id forms__id--name">
+                      <label class="forms__description forms__description--name" id="username">Имя*:</label>
+                      <div class="forms__container">
+                        <input type="text" class="forms__input" id="username" name="user-name" placeholder="Петр" required>
+                      </div>
+                    </li>
+                    <li class="forms__id forms__id--lastname">
+                      <label class="forms__description forms__description--lastname" id="lastname">Фамилия*:</label>
+                      <div class="forms__container">
+                        <input type="text" class="forms__input" id="lastname" name="user-lastname" placeholder="Иванов" required>
+                      </div>
+                    </li>
+                    <li class="forms__id forms__id--fathername">
+                      <label class="forms__description forms__description--fathername" id="fathername">Отчество:</label>
+                        <div class="forms__container">
+                          <input type="text" class="forms__input" id="fathername" name="user-fathertname" placeholder="Александрович">
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="forms__item forms__item--contacts">
+                  <div class="line-container">
+                    <span class="forms__line--left"></span>
+                    <span class="forms__line--right"></span>
+                  </div>
+                  <legend class="forms__title forms__title--contacts">Контактная информация:</legend>
+                  <ul class="forms__wrapper forms__wrapper--contacts">
+                    <li class="forms__contact forms__contact--phone">
+                      <label class="forms__description forms__description--phone" id="phone">Контактный телефон*:</label>
+                      <div class="forms__container forms__container--phone">
+                        <input type="tel" class="forms__input forms__input--phone" name="user-phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{10}" required>
+                      </div>
+                    </li>
+                    <li class="forms__contact forms__contact--email">
+                      <label class="forms__description forms__description--email" id="email">Электронная почта*:</label>
+                      <div class="forms__container forms__container--email">
+                        <input type="email" class="forms__input forms__input--email" name="user-email" id="email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="forms__item forms__item--opinions">
+                  <legend class="forms__title forms__title--opinions">Ваше общее впечатление:</legend>
+                  <ul class="forms__wrapper forms__wrapper--opinions">
+                    <li class="forms__choice forms__choice--radio">
                       <label class="forms__opinion forms__opinion--satisfied">
-                        <input type="radio" name="user-opinion">
-                        <span class="forms__answer">Скорее положительное</span>
+                        <input class="visually-hidden forms__filter" type="radio" name="user-opinion" checked="checked">
+                        <span class="forms__indicator forms__indicator--radio"></span>
+                        <span class="forms__option">Скорее положительное</span>
                     </label>
-                  </li>
-                    <li class="forms__choice">
+                    </li>
+                    <li class="forms__choice forms__choice--radio">
                       <label class="forms__opinion forms__opinion--unsatisfied">
-                        <input type="radio" name="user-opinion">
-                        <span class="forms__answer">Скорее отрицательное</span>
+                        <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
+                        <span class="forms__indicator forms__indicator--radio"></span>
+                        <span class="forms__option">Скорее отрицательное</span>
                     </label>
-                  </li>
-                    <li class="forms__choice">
+                    </li>
+                    <li class="forms__choice forms__choice--radio">
                       <label class="forms__opinion forms__opinion--noidea">
-                        <input type="radio" name="user-opinion">
-                        <span class="forms__answer">Затрудняюсь ответить</span>
+                        <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
+                        <span class="forms__indicator forms__indicator--radio"></span>
+                        <span class="forms__option">Затрудняюсь ответить</span>
                       </label>
                     </li>
                   </ul>
-                  <legend class="forms__title">Посещенные достопримечательности:</legend>
-                  <ul class="forms__list">
-                    <li class="forms__item">
+                </div>
+                <div class="forms__item forms__item--sights">
+                  <div class="line-container">
+                    <span class="forms__line--left"></span>
+                    <span class="forms__line--right"></span>
+                  </div>
+                  <legend class="forms__title forms__title--sights">Посещенные достопримечательности:</legend>
+                  <ul class="forms__wrapper forms__wrapper--sights">
+                    <li class=" forms__choice forms__choice--box">
                       <label class="forms__place">
-                        <input type="checkbox" name="visited-place">
-                        <span class="forms__description">Мост Дьявола</span>
+                        <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
+                        <span class="forms__indicator forms__indicator--box"></span>
+                        <span class="forms__option">Мост Дьявола</span>
                       </label>
                     </li>
-                    <li class="forms__item">
+                    <li class="forms__choice forms__choice--box">
                       <label class="forms__place">
-                        <input type="checkbox" name="visited-place">
-                        <span class="forms__description">Гора-Колокол</span>
+                        <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
+                        <span class="forms__indicator forms__indicator--box"></span>
+                        <span class="forms__option">Гора-Колокол</span>
                       </label>
                     </li>
-                    <li class="forms__item">
+                    <li class="forms__choice forms__choice--box">
                       <label class="forms__place">
-                        <input type="checkbox" name="visited-place">
-                        <span class="forms__description">Слайд-парк</span>
+                        <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
+                        <span class="forms__indicator forms__indicator--box"></span>
+                        <span class="forms__option">Слайд-парк</span>
                       </label>
                     </li>
-                    <li class="forms__item">
+                    <li class="forms__choice forms__choice--box">
                       <label class="forms__place">
-                        <input type="checkbox" name="visited-place">
-                        <span class="forms__description">Красные скалы</span>
+                        <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
+                        <span class="forms__indicator forms__indicator--box"></span>
+                        <span class="forms__option">Красные скалы</span>
                       </label>
                     </li>
                   </ul>
-                  <legend class="forms-title">Опишите свои эмоции:</legend>
-                  <textarea rows="8" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
-                </fieldset>
+                </div>
+                <div class="forms__item forms__item--comments">
+                  <div class="line-container">
+                    <span class="forms__line--left"></span>
+                    <span class="forms__line--right"></span>
+                  </div>
+                  <legend class="forms__title">Опишите свои эмоции:</legend>
+                  <div class="forms__container forms__container--comments">
+                    <textarea class="forms__comments" rows="6" cols="28" placeholder="Опишите подробно все свои восторги"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="forms__feedback">
                 <input class="forms__button" type="submit" value="Отправить отзыв">
                 <span class="forms__requirements">*-обязательные поля</span>
+              </div>
               </form>
           </section>
-
         </main>
         <footer>
           <div class="footer-page">
