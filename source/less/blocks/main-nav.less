@@ -63,11 +63,6 @@
   }
 }
 
-.main-nav__image--tablet,
-.main-nav__image--desktop {
-  display: none;
-}
-
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__list {
     display: none;
@@ -97,14 +92,6 @@
     &--form {
       margin-left: 10%;
     }
-  }
-
-  .main-nav__image--tablet {
-    display: block;
-  }
-
-  .main-nav__image--mobile {
-    display: none;
   }
 
   .main-nav__link {
@@ -157,15 +144,12 @@
     margin: 0 auto;
   }
 
-  .main-nav__image--desktop {
-    display: block;
-  }
-
-  .main-nav__image--tablet {
-    display: none;
-  }
-
   .main-nav__menu {
     right: -92px;
+  }
+
+  .main-nav__image {
+    display: block;
+    .size(188px, 96px);
   }
 }
