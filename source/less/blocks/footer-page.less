@@ -26,7 +26,7 @@
     top: 17px;
     left: 14px;
     .size(18px, 14px);
-    background-image: url("../img/icon-twitter.png");
+    background-image: url("../img/icon-twitter.svg");
     background-repeat: no-repeat;
   }
 
@@ -35,7 +35,7 @@
     top: 14px;
     left: 19px;
     .size(9px, 18px);
-    background-image: url("../img/icon-facebook.png");
+    background-image: url("../img/icon-facebook.svg");
     background-repeat: no-repeat;
   }
 
@@ -44,8 +44,21 @@
     top: 17px;
     left: 13px;
     .size(20px, 14px);
-    background-image: url("../img/icon-youtube.png");
+    background-image: url("../img/icon-youtube.svg");
     background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: @darkblue;
+  }
+
+  &:focus,
+  &:active {
+    background-color: rgb(84, 150, 189);
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
 
@@ -55,14 +68,21 @@
   padding-right: 35px;
   padding-bottom: 35px;
   position: relative;
+}
 
-  &::after {
-    .alter;
-    top: -5px;
-    right: 0;
-    .size(27px, 34px);
-    background-image: url("../img/htmlacademy.svg");
-    background-repeat: no-repeat;
+.footer-page__icon--academy {
+  position: absolute;
+  top: -5px;
+  right: 0;
+
+  &:hover {
+    fill: @blue;
+  }
+
+  &:focus,
+  &:active {
+    fill: @black;
+    opacity: 0.3;
   }
 }
 
@@ -71,11 +91,20 @@
     max-width: @tablet-width;
     display: flex;
     justify-content: space-around;
-    margin-top: 36px;
+    margin-top: 40px;
   }
 
   .footer-page__title,
   .footer-page__sign {
     align-self: center;
+    margin-top: -19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer-page {
+    max-width: 960px;
+    margin-top: 102px;
+    justify-content: space-between;
   }
 }

@@ -30,7 +30,7 @@ ymaps.ready(function () {
   balloonContent: 'HTML Academy, first level',
   }, {
   iconLayout: 'default#imageWithContent',
-  iconImageHref: 'https://cdn4.iconfinder.com/data/icons/map-pins-2/256/21-512.png',
+  iconImageHref: '../img/icon-map.svg',
   iconImageSize: [48, 48],
   iconImageOffset: [-27, -48],
   iconContentOffset: [15, 15],
