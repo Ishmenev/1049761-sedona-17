@@ -265,30 +265,14 @@
     margin: 0 auto;
     flex-grow: 1;
     height: 256px;
-
-    &--town {
-      background-image: url("../img/main-city-tablet@1x.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-city-tablet@2x.jpg");
-      }
-    }
-
-    &--bridge {
-      background-image: url("../img/main-bridge-tablet@1x.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-bridge-tablet@1x.jpg");
-      }
-    }
   }
 
   .advantages__picture {
-    display: none;
+    width: 100%;
+
+    &--bridge {
+      margin-left: 0;
+    }
   }
 
   .offers-list {
@@ -428,22 +412,11 @@
   }
 
   .advantages__container {
-    &--town {
-      background-image: url("../img/main-city-desktop@1x.jpg");
-      background-position: 0 center;
+    .size(800px, 256px);
+    overflow: hidden;
+  }
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-city-desktop@2x.jpg");
-      }
-    }
-
-    &--bridge {
-      background-image: url("../img/main-bridge-desktop@1x.jpg");
-      background-position: 0 center;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-bridge-desktop@2x.jpg");
-      }
-    }
+  .advantages__picture {
+    margin-top: -64px;
   }
 }

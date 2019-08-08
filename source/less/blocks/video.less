@@ -1,0 +1,165 @@
+.video {
+  width: 320px;
+  padding-top: 25px;
+  margin: 0 auto;
+  .text-styles(14px);
+  text-align: center;
+}
+
+.video__description {
+  padding-left: 28px;
+  padding-right: 28px;
+  margin-bottom: 40px;
+}
+
+.video__wrapper {
+  font-size: 0;
+  position: relative;
+}
+
+.video__menu {
+  .size(280px, 66px);
+  background-color: rgb(242, 242, 242);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.video__scroll {
+  .size(280px, 45px);
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: -45px;
+  display: flex;
+}
+
+.video__line {
+  display: inline-block;
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: auto;
+  position: relative;
+
+  &::before {
+    .alter;
+    top: -3px;
+    left: 35px;
+    .size(9px, 9px);
+    border-radius: 50%;
+    background-color: @white;
+  }
+}
+
+.video__symbol {
+  cursor: pointer;
+  fill: rgb(92, 104, 112);
+
+  &--replay {
+    padding-left: 23px;
+  }
+
+  &--subtitles {
+    margin-left: auto;
+  }
+
+  &--fullscreen {
+    padding-left: 31px;
+    padding-right: 23px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    width: @tablet-width;
+    padding-top: 57px;
+  }
+
+  .video__title {
+    .text-styles(30px);
+  }
+
+  .video__description {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .video__wrapper {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .video__image {
+    .size(648px, 499px);
+  }
+
+  .video__menu {
+    .size(648px, 93px);
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+  }
+
+  .video__scroll {
+    width: 389px;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    order: 2;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .video__line {
+    width: 389px;
+
+    &::before {
+      left: 113px;
+    }
+  }
+
+  .video__symbol {
+    fill: @white;
+
+    &--replay {
+      order: 1;
+      padding-left: 35px;
+    }
+
+    &--subtitles {
+      order: 3;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &--fullscreen {
+      order: 4;
+      padding-right: 41px;
+      padding-left: 31px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__wrapper {
+    width: 800px;
+  }
+
+  .video__image {
+    .size(800px, 500px);
+  }
+
+  .video__menu {
+    .size(800px, 93px);
+  }
+
+  .video__scroll {
+    width: 540px;
+  }
+
+  .video__line {
+    width: 540px;
+  }
+}
