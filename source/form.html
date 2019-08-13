@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная страница Седона</title>
-        <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.min.css">
       </head>
@@ -69,7 +68,7 @@
               </li>
             </ul>
             <div class="main-nav__menu">
-              <a class="main-nav__logo" href="#">
+              <a class="main-nav__logo" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
                   <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -217,6 +216,28 @@
             </a>
             </div>
         </footer>
+        <div class="modal modal--error">
+          <div class="modal__wrapper modal__wrapper--error">
+            <form class="modal-form" action="#" method="post">
+              <h2 class="modal__title">Что-то пошло не так!</h2>
+              <p class="modal__announce modal__announce--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+              <div class="modal__confirm">
+                <input class="modal__button modal__button--confirm" type="submit" name="send-form" value="ok">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal--right">
+          <div class="modal__wrapper modal__wrapper--right">
+            <form class="modal-form" action="#" method="post">
+              <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+              <p class="modal__announce modal__announce--right">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+              <div class="modal__close">
+                <input class="modal__button modal__button--close" type="submit" name="send-form" value="Закрыть окно">
+              </div>
+            </form>
+          </div>
+        </div>
         <script src="js/script.js"></script>
       </body>
 </html>

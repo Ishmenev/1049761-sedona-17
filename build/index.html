@@ -4,7 +4,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Главная страница Седона</title>
-      <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -69,7 +68,7 @@
           </li>
         </ul>
         <div class="main-nav__menu">
-          <a class="main-nav__logo" href="#">
+          <a class="main-nav__logo" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -96,6 +95,9 @@
             </div>
             <div class="advantages__container advantages__container--town">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-city-mobile@1x.webp">
                 <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
                 <img class="advantages__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Повседневные виды Седоны">
@@ -108,7 +110,7 @@
                         <use xlink:href="#icon-sprite-house"></use>
                     </svg>
                 </span>
-                <p class="offers-list__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <p class="offers-list__text offers-list__text--houses">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="offers-list__item offers-list__item--gifts">
                 <span class="offers-list__title offers-list__title--gifts">Сувениры
@@ -116,7 +118,7 @@
                         <use xlink:href="#icon-sprite-gift"></use>
                     </svg>
                   </span>
-                <p class="offers-list__text">Не только китайского, но и местного производства!</p>
+                <p class="offers-list__text offers-list__text--gifts">Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
               </li>
               <li class="offers-list__item offers-list__item--food">
                 <span class="offers-list__title offers-list__title--food">Еда
@@ -124,18 +126,21 @@
                         <use xlink:href="#icon-sprite-burger"></use>
                     </svg>
                   </span>
-                <p class="offers-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <p class="offers-list__text offers-list__text--food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item advantages__item--bridge">
             <div class="advantages__wrapper advantages__wrapper--bridge">
-              <h3 class="advantages__title">Там есть мост Дьявола</h3>
+              <h3 class="advantages__title advantages__title--bridge">Там есть мост&nbsp;Дьявола</h3>
               <span class="advantages__number">— №2 —</span>
               <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <div class="advantages__container advantages__container--bridge">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp">
                 <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
                 <img class="advantages__picture advantages__picture--bridge" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Вид на мост Дьявола">
@@ -146,25 +151,25 @@
             <div class="advantages__wrapper advantages__wrapper--area">
               <h3 class="advantages__title advantages__title--sub">Небольщая площадь</h3>
               <span class="advantages__number">— №3 —</span>
-              <p class="advantages__description advantages__description--line">Все интересные места находятся очень близко</p>
+              <p class="advantages__description advantages__description--area">Все интересные места находятся очень близко</p>
             </div>
             <div class="advantages__wrapper advantages__wrapper--road">
               <h3 class="advantages__title advantages__title--sub">Красивая дорога</h3>
               <span class="advantages__number">— №4 —</span>
-              <p class="advantages__description advantages__description--line">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="advantages__description advantages__description--road">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="advantages__wrapper advantages__wrapper--tourists">
               <h3 class="advantages__title advantages__title--sub">Мало туристов</h3>
               <span class="advantages__number">— №5 —</span>
-              <p class="advantages__description">Большинство едет в Гранд каньон и толпится там</p>
+              <p class="advantages__description advantages__description--tourists">Большинство едет в Гранд каньон и толпится там</p>
             </div>
           </li>
         </ul>
       </section>
       <section class="choice-menu">
         <h2 class="choice-menu__title">Заинтересовались?</h2>
-        <p class="choice-menu__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="choice-menu__button" href="#">Найти гостиницу</a>
+        <p class="choice-menu__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+        <a class="choice-menu__button" target="_blank" href="#">Найти гостиницу</a>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <div class="choice-menu__map" id="map"></div>
       </section>

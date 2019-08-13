@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная страница Седона</title>
-        <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
@@ -69,7 +68,7 @@
             </li>
           </ul>
           <div class="main-nav__menu">
-            <a class="main-nav__logo" href="#">
+            <a class="main-nav__logo" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -91,6 +90,9 @@
               <li class="pictures__item pictures__item--sunset">
                 <a class="pictures__link pictures__link--sunset" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp" srcset="img/photo-sunset-mobile@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
                     <img class="pictures__image pictures__image--sunset" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Закат в Седоне" data-object-fit="cover">
@@ -105,12 +107,15 @@
               <li class="pictures__item pictures__item--plants">
                   <a class="pictures__link--plants" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp" srcset="img/photo-cactus-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
                       <img class="pictures__image pictures__image--plants" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Изображение растений в Седоне" data-object-fit="cover">
                     </picture>
                   </a>
-                  <div class="pictures__wrapper">
+                  <div class="pictures__wrapper pictures__wrapper--plants">
                     <h3 class="pictures__sign">Местная растительность</h3>
                     <p class="pictures__author">Автор фото: Сергей</p>
                     <span class="picutes__likes">143</span>
@@ -119,6 +124,9 @@
               <li class="pictures__item pictures__item--road">
                   <a class="pictures__link--road" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp" srcset="img/photo-roads-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                       <img class="pictures__image pictures__image--road" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Изображение дороги в Седоне" data-object-fit="cover">
@@ -133,12 +141,15 @@
               <li class="pictures__item pictures__item--devil">
                   <a class="pictures__link--devil" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp" srcset="img/photo-bridge-mobile@2x.webp 2x">
                       <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                       <img class="pictures__image pictures__image--devil" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Изображение моста дьявола" data-object-fit="cover">
                     </picture>
                   </a>
-                  <div class="pictures__wrapper">
+                  <div class="pictures__wrapper pictures__wrapper--devil">
                     <h3 class="pictures__sign">Мост дьявола</h3>
                     <p class="pictures__author">Автор фото: Антон</p>
                     <span class="picutes__likes">254</span>
@@ -147,10 +158,13 @@
             </ul>
         </section>
         <section class="video">
-          <h2 class="video__title">Заинтересовались?</h2>
-          <p class="video__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <div class="video__wrapper">
             <picture class="video__viewbox">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp" srcset="img/video-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
               <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320px" height="201px" alt="Автомобильная дорога в Седону">

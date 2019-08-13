@@ -26,9 +26,6 @@ ymaps.ready(function () {
   ),
 
   myPlacemarkWithContent = new ymaps.Placemark([34.8697395, -111.7609896], {
-  hintContent: 'Собственный значок метки с контентом',
-  balloonContent: 'HTML Academy, first level',
-  }, {
   iconLayout: 'default#imageWithContent',
   iconImageHref: 'https://cdn4.iconfinder.com/data/icons/map-pins-2/256/21-512.png',
   iconImageSize: [48, 48],

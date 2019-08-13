@@ -1,23 +1,25 @@
 .footer-page {
   max-width: 320px;
   margin: 0 auto;
-  margin-top: 30px;
   text-align: center;
 }
 
 .footer-page__title {
   .text-styles(21px);
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .footer-page__social {
-  margin-bottom: 50px;
+  margin-bottom: 47px;
+  margin-left: 7px;
+  font-size: 0;
 }
 
 .footer-page__link {
   display: inline-block;
   .size(46px, 48px);
+  margin-right: 6px;
   background-color: @blue;
   position: relative;
 
@@ -72,8 +74,8 @@
 
 .footer-page__icon--academy {
   position: absolute;
-  top: -5px;
-  right: 0;
+  top: -7px;
+  right: -3px;
 
   &:hover {
     fill: @blue;
@@ -88,23 +90,34 @@
 
 @media (min-width: @tablet-width) {
   .footer-page {
-    max-width: @tablet-width;
+    max-width: 648px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 13px;
     display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
+    justify-content: space-between;
   }
 
-  .footer-page__title,
-  .footer-page__sign {
+  .footer-page__title {
+    margin-top: 9px;
     align-self: center;
-    margin-top: -19px;
+  }
+
+  .footer-page__sign {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .footer-page__social {
+    margin-right: 14px;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer-page {
     max-width: 960px;
-    margin-top: 102px;
+    margin-top: 0;
     justify-content: space-between;
   }
 }
