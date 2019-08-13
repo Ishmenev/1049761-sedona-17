@@ -1,3 +1,4 @@
+@import "scaffolding.less";
 @import "mixins.less";
 @import "variables";
 @import "blocks/main-nav.less";
@@ -7,26 +8,6 @@
 @import "blocks/choice-menu.less";
 @import "blocks/inner-intro.less";
 @import "blocks/pictures.less";
-@import "blocks/map.less";
 @import "blocks/forms.less";
-
-body {
-  min-width: 320px;
-  margin: 0;
-}
-
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+@import "blocks/video.less";
+@import "blocks/modal.less";

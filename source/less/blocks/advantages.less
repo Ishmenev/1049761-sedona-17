@@ -49,22 +49,22 @@
     box-sizing: border-box;
     position: relative;
 
-    &::before {
+    /*&::before {
       .alter;
       top: 0;
       left: 0;
       width: 100%;
       height: 37px;
-      background-image: url("../img/decor-element.png");
+      background-image: url("../img/bg-triangle.svg");
       background-position: center 0;
       background-repeat: no-repeat;
-    }
+    }*/
   }
 
   &--bridge {
     background-color: @blue;
     .text-styles(14px, @white);
-    padding-top: 45px;
+    padding-top: 40px;
     padding-bottom: 42px;
     padding-left: 30px;
     padding-right: 31px;
@@ -72,35 +72,45 @@
   }
 
   &--area {
-    padding: 33px 41px;
+    padding-top: 28px;
+    padding-right: 41px;
+    padding-left: 41px;
+    padding-bottom: 28px;
     box-sizing: border-box;
   }
 
   &--road {
-    padding: 33px 56px;
+    padding-top: 26px;
+    padding-right: 57px;
+    padding-left: 56px;
+    padding-bottom: 28px;
     box-sizing: border-box;
   }
 
   &--tourists {
-    padding: 33px 37px;
+    padding-top: 26px;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 28px;
     box-sizing: border-box;
   }
 }
 
 .advantages__number {
   display: inline-block;
-  padding-top: 10px;
+  padding-top: 11px;
   padding-bottom: 17px;
 }
 
 .advantages__description {
   margin: 0;
-  line-height: 20px;
+  line-height: 22px;
   position: relative;
 
-  &--line::after {
+  &--area::after,
+  &--road::after {
     .alter;
-    bottom: -32px;
+    bottom: -27px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -129,14 +139,18 @@
 
 .offers-list {
   .list-reset;
-  padding-top: 40px;
+  padding-top: 36px;
 }
 
 .offers-list__item {
   padding-left: 70px;
-  padding-right: 51px;
-  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
   .text-styles(14px);
+
+  &--food {
+    padding-bottom: 38px;
+  }
 }
 
 .offers-list__title {
@@ -145,36 +159,30 @@
   font-weight: bold;
   margin-bottom: 15px;
   position: relative;
+}
 
-  &--houses::before {
-    .alter;
+.offers-list__icon {
+  position: absolute;
+  fill: @blue;
+
+  &--house {
+    left: -50px;
     top: -10px;
-    left: -50px;
-    .size(39px, 37px);
-    background-image: url("../img/icon-house.png");
-    background-repeat: no-repeat;
   }
 
-  &--gifts::before {
-    .alter;
+  &--gifts {
+    left: -46px;
     top: -13px;
-    left: -50px;
-    .size(39px, 37px);
-    background-image: url("../img/icon-gift.png");
-    background-repeat: no-repeat;
   }
 
-  &--food::before {
-    .alter;
-    top: -7px;
+  &--food {
     left: -50px;
-    .size(39px, 37px);
-    background-image: url("../img/icon-burger.png");
-    background-repeat: no-repeat;
+    top: -6px;
   }
 }
 
 .offers-list__text {
+  line-height: 21px;
   margin: 0;
   padding: 0;
 }
@@ -191,6 +199,11 @@
       padding-left: 139px;
       padding-right: 139px;
       .text-styles(21px, @black);
+    }
+
+    &--bridge {
+      padding-left: 22px;
+      padding-right: 22px;
     }
   }
 
@@ -232,7 +245,7 @@
     &--bridge {
       flex-basis: 33%;
       padding: 0;
-      padding-top: 50px;
+      padding-top: 43px;
       padding-left: 30px;
       padding-right: 31px;
       box-sizing: border-box;
@@ -240,69 +253,50 @@
     }
 
     &--area {
+      min-width: 256px;
       padding: 0;
-      padding-left: 49px;
-      padding-right: 48px;
-      padding-top: 50px;
+      padding-top: 42px;
       box-sizing: border-box;
     }
 
     &--road {
+      min-width: 256px;
       padding: 0;
-      padding-left: 61px;
-      padding-right: 63px;
-      padding-top: 50px;
+      padding-top: 42px;
       box-sizing: border-box;
     }
 
     &--tourists {
+      min-width: 256px;
       padding: 0;
-      padding-left: 56px;
-      padding-right: 55px;
-      padding-top: 50px;
+      padding-top: 42px;
       box-sizing: border-box;
     }
   }
 
   .advantages__number {
-    padding-bottom: 23px;
+    padding-bottom: 20px;
   }
 
   .advantages__container {
     margin: 0 auto;
     flex-grow: 1;
     height: 256px;
-
-    &--town {
-      background-image: url("../img/main-city-tablet@1x.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-city-tablet@2x.jpg");
-      }
-    }
-
-    &--bridge {
-      background-image: url("../img/main-bridge-tablet@1x.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-bridge-tablet@1x.jpg");
-      }
-    }
   }
 
   .advantages__picture {
-    display: none;
+    width: 100%;
+
+    &--bridge {
+      margin-left: 0;
+    }
   }
 
   .offers-list {
     margin: 0;
     padding: 0;
-    padding-top: 164px;
-    padding-bottom: 66px;
+    padding-top: 158px;
+    padding-bottom: 62px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -310,26 +304,59 @@
 
   .offers-list__item {
     padding: 0;
+    margin: 0;
     text-align: center;
 
     &--houses {
-      padding-left: 51px;
-      padding-right: 51px;
+      order: 1;
+      min-width: 261px;
+      padding-left: 46px;
+      padding-right: 50px;
+      box-sizing: border-box;
     }
 
     &--gifts {
-      padding-left: 51px;
-      padding-right: 51px;
+      order: 3;
+      min-width: 269px;
+      padding-left: 44px;
+      padding-right: 52px;
+      box-sizing: border-box;
     }
 
     &--food {
-      padding-left: 51px;
-      padding-right: 46px;
+      order: 2;
+      min-width: 252px;
+      padding-left: 50px;
+      padding-right: 50px;
+      box-sizing: border-box;
     }
   }
 
   .offers-list__title {
     .text-styles(21px);
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .offers-list__icon {
+    &--house {
+      .size(75px, 72px);
+      left: 0;
+      top: -104px;
+    }
+
+    &--gifts {
+      .size(64px, 75px);
+      left: 20px;
+      top: -108px;
+    }
+
+    &--food {
+      .size(77px, 68px);
+      left: -22px;
+      top: -98px;
+    }
   }
 
   .advantages__item--wrapper {
@@ -337,18 +364,37 @@
     flex-wrap: nowrap;
   }
 
-  .advantages__description--line::after {
-    display: none;
+  .advantages__title--sub {
+    width: 160px;
+    margin: 0 auto;
+    color: @black;
   }
 
-  .advantages__title--sub {
-    color: @black;
+  .advantages__description {
+    &--area {
+      padding-left: 49px;
+      padding-right: 48px;
+    }
+
+    &--road {
+      padding-left: 54px;
+      padding-right: 56px;
+    }
+
+    &--tourists {
+      padding-left: 54px;
+      padding-right: 53px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
-@media (max-width: @tablet-width-only) {
+@media (min-width: @tablet-width-only) {
   .advantages__title--sub {
-    width: 155px;
+    width: 240px;
     margin: 0 auto;
   }
 }
@@ -361,13 +407,17 @@
 
   .advantages__title {
     &--main {
-      padding-left: 355px;
-      padding-right: 355px;
+      padding-left: 353px;
+      padding-right: 357px;
     }
 
     &--town {
       width: 200px;
       margin: 0 auto;
+    }
+
+    &--sub {
+      width: 160px;
     }
   }
 
@@ -384,50 +434,74 @@
 
     &--bridge {
       padding: 0;
-      padding-top: 58px;
+      padding-top: 54px;
       padding-left: 90px;
       padding-right: 90px;
     }
 
     &--area {
+      width: 400px;
       padding: 0;
-      padding-top: 50px;
-      padding-left: 57px;
-      padding-right: 58px;
+      padding-top: 44px;
+      padding-left: 8px;
+      padding-right: 11px;
     }
 
     &--road {
+      width: 400px;
       padding: 0;
-      padding-top: 50px;
-      padding-left: 69px;
-      padding-right: 69px;
+      padding-top: 44px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     &--tourists {
+      width: 400px;
       padding: 0;
-      padding-top: 50px;
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-top: 44px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
   .advantages__container {
-    &--town {
-      background-image: url("../img/main-city-desktop@1x.jpg");
-      background-position: 0 center;
+    .size(800px, 256px);
+    overflow: hidden;
+  }
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-city-desktop@2x.jpg");
-      }
+  .advantages__picture {
+    margin-top: -64px;
+  }
+
+  .offers-list {
+    padding-bottom: 83px;
+  }
+
+  .offers-list__item {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    &--houses {
+      min-width: 392px;
+      padding-left: 69px;
+      padding-right: 68px;
     }
 
-    &--bridge {
-      background-image: url("../img/main-bridge-desktop@1x.jpg");
-      background-position: 0 center;
+    &--gifts {
+      order: 3;
+      min-width: 383px;
+      padding-left: 73px;
+      padding-right: 94px;
+      box-sizing: border-box;
+    }
 
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/main-bridge-desktop@2x.jpg");
-      }
+    &--food {
+      order: 2;
+      min-width: 425px;
+      padding-left: 65px;
+      padding-right: 77px;
+      box-sizing: border-box;
     }
   }
 }
