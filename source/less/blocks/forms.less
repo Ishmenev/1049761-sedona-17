@@ -1,21 +1,29 @@
-.forms {
-  padding-top: 16px;
-}
-
 .forms__title {
   .text-styles(18px, @black);
   font-weight: bold;
+  line-height: 26px;
   padding: 0;
-  padding-top: 24px;
+  padding-top: 20px;
   margin: 0 auto;
   text-align: center;
 
   &--main {
-    margin-bottom: 25px;
+    padding-top: 40px;
+    margin-bottom: 27px;
     text-align: center;
   }
 
+  &--contacts {
+    padding-bottom: 25px;
+  }
+
+  &--opinions {
+    padding-bottom: 40px;
+  }
+
   &--sights {
+    padding-top: 19px;
+    padding-bottom: 31px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -23,11 +31,12 @@
 
 .forms__intro {
   .text-styles(14px, @black);
+  line-height: 24px;
   text-align: center;
   margin: 0;
   padding-left: 21px;
   padding-right: 21px;
-  padding-bottom: 21px;
+  padding-bottom: 16px;
   position: relative;
 
   &::after {
@@ -78,15 +87,18 @@
 
 .forms__id {
   display: flex;
-  padding-left: 20px;
+  padding-left: 23px;
   padding-right: 20px;
-  margin-top: 20px;
+  margin-top: 21px;
+
+  &--fathername {
+    padding-left: 27px;
+  }
 }
 
 .forms__contact {
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 20px;
 }
 
 .forms__container {
@@ -100,7 +112,7 @@
 
     &::after {
       .alter;
-      top: 14px;
+      top: 10px;
       right: 0;
       width: 58px;
       height: 58px;
@@ -117,7 +129,7 @@
 
     &::after {
       .alter;
-      top: 14px;
+      top: 10px;
       right: 0;
       width: 58px;
       height: 58px;
@@ -139,19 +151,33 @@
   width: 100%;
   height: 58px;
   margin: 0;
-  padding-left: 22px;
+  padding-left: 23px;
   padding-right: 20px;
   box-sizing: border-box;
-  border: none;
+  border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  .text-styles(18px);
+  .text-styles(18px, @black);
   font-weight: bold;
   text-transform: none;
+  cursor: pointer;
 
-  &--phone,
-  &--email {
+  &--phone {
     padding-right: 80px;
-    margin-top: 14px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  &--email {
+    margin-top: 10px;
+  }
+
+  &:hover {
+    background-color: rgb(229, 229, 229);
+    border: 4px solid rgb(229, 229, 229);
+  }
+
+  &:focus {
+    background-color: @white;
   }
 }
 
@@ -160,7 +186,7 @@
   align-self: center;
 
   &--phone {
-    padding-left: 22px;
+    padding-left: 21px;
   }
 
   &--email {
@@ -175,11 +201,29 @@
   cursor: pointer;
 }
 
-.forms__choice {
+.forms__radio {
   padding-left: 98px;
   padding-right: 37px;
-  padding-top: 42px;
   position: relative;
+
+  &--positive {
+    padding-bottom: 45px;
+  }
+
+  &--unsatisfied {
+    padding-bottom: 45px;
+  }
+}
+
+.forms__box {
+  padding-left: 98px;
+  padding-right: 37px;
+  padding-bottom: 57px;
+  position: relative;
+
+  &--mountains {
+    padding-bottom: 0;
+  }
 }
 
 .forms__filter {
@@ -189,11 +233,12 @@
 
 .forms__indicator {
   .alter;
-  top: 25px;
-  left: 25px;
+  top: -16px;
+  left: 20px;
   width: 56px;
   height: 56px;
   background-color: rgb(242, 242, 242);
+  cursor: pointer;
 
   &--radio {
     border-radius: 50%;
@@ -249,33 +294,57 @@
   margin: 0;
   padding-left: 21px;
   padding-right: 30px;
-  padding-top: 22px;
+  padding-top: 16px;
   padding-bottom: 22px;
-  border: none;
+  border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
-  .text-styles(18px);
+  .text-styles(18px, @black);
   font-weight: bold;
   text-transform: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(229, 229, 229);
+    border: 4px solid rgb(229, 229, 229);
+  }
+
+  &:focus {
+    background-color: @white;
+    border: 4px solid rgb(242, 242, 242);
+  }
 }
 
 .forms__feedback {
   margin-left: 19px;
   margin-right: 21px;
   margin-top: 50px;
-  margin-bottom: 78px;
+  margin-bottom: 73px;
   display: flex;
 }
 
 .forms__button {
   flex-grow: 1;
   display: block;
-  .link-button(21px, 21px, @blue);
-  padding-left: 48px;
+  .link-button(15px, 16px, @blue);
+  padding-left: 49px;
   padding-right: 47px;
-  .text-styles(16px, @white);
+  .text-styles(21px, @white);
   font-weight: bold;
   border: none;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: rgb(102, 158, 192);
+  }
+
+  &:active {
+    background-color: rgb(84, 150, 189);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: rgb(229, 229, 299);
+  }
 }
 
 .forms__requirements {
@@ -288,34 +357,57 @@
 
     &--main {
       .text-styles(30px);
+      padding-top: 78px;
     }
 
     &--id {
+      text-align: left;
+      margin: 0;
       margin-left: 0;
-      margin-bottom: 60px;
+      padding-bottom: 57px;
+      padding-top: 0;
     }
 
     &--opinions {
+      text-align: left;
+      padding-bottom: 75px;
+      padding-top: 0;
       margin-left: 0;
-      margin-bottom: 40px;
     }
 
     &--contacts {
+      padding-top: 27px;
       padding-left: 60px;
       padding-right: 60px;
+      padding-bottom: 27px;
+      width: 280px;
       background-color: white;
       z-index: 5;
     }
 
     &--sights {
-      padding-left: 246px;
-      padding-right: 244px;
+      padding-left: 57px;
+      padding-right: 63px;
+      padding-bottom: 0;
+      width: 280px;
+      background-color: @white;
+      z-index: 10;
+    }
+
+    &--comments {
+      padding-top: 19px;
+      padding-left: 71px;
+      padding-right: 73px;
+      width: 255px;
+      background-color: @white;
+      z-index: 10;
     }
   }
 
   .forms__intro {
     padding-left: 164px;
     padding-right: 165px;
+    padding-bottom: 75px;
 
     &::after {
       display: none;
@@ -325,6 +417,8 @@
   .forms__list {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 60px;
+    margin-left: 60px;
   }
 
   .forms__item {
@@ -332,13 +426,12 @@
 
     &--opinions {
       order: 1;
-      padding-left: 60px;
       box-sizing: border-box;
       position: relative;
 
       &::after {
         .alter;
-        top: 28px;
+        top: 4px;
         right: 0;
         width: 1px;
         height: 292px;
@@ -349,97 +442,118 @@
     &--id {
       order: 2;
       padding-left: 58px;
-      padding-right: 60px;
       box-sizing: border-box;
     }
 
     &--contacts {
       flex-basis: 100%;
       order: 3;
+      position: relative;
+      padding-bottom: 35px;
+
+      &::before {
+        .alter;
+        top: 37px;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(214, 214, 214);
+        z-index: -1;
+      }
     }
 
     &--sights {
       flex-basis: 100%;
       order: 4;
       position: relative;
+
+      &::before {
+        .alter;
+        top: 44px;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(214, 214, 214);
+        z-index: -1;
+      }
     }
 
     &--comments {
       flex-basis: 100%;
       order: 5;
+      position: relative;
+
+      &::before {
+        .alter;
+        top: 33px;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(214, 214, 214);
+        z-index: -1;
+      }
     }
-  }
-
-  .line-container {
-    position: relative;
-    width: calc(100% - 120px);
-    height: 1px;
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-
-  .forms__line--left {
-    display: block;
-    position: absolute;
-    top: 40px;
-    width: 22%;
-    height: 1px;
-    background-color: rgb(214, 214, 214);
-  }
-
-  .forms__line--right {
-    display: block;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    width: 21%;
-    height: 1px;
-    background-color: rgb(214, 214, 214);
   }
 
   .forms__wrapper {
     padding: 0;
     margin: 0;
 
-    &::after {
-      display: none;
-    }
-
     &--opinions {
       padding-bottom: 60px;
     }
 
-    &--contacts {
-      position: relative;
-      margin-left: 60px;
-      margin-right: 60px;
-    }
-
     &--sights {
       position: relative;
-      margin-left: 160px;
-      margin-right: 60px;
-      margin-top: 55px;
+      margin-left: 93px;
+      margin-top: 56px;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
   .forms__id {
     padding: 0;
+    margin: 0;
+
+    &--name {
+      padding-bottom: 20px;
+    }
+
+    &--lastname {
+      padding-bottom: 20px;
+    }
+  }
+
+  .forms__input {
+    padding-left: 18px;
   }
 
   .forms__contact {
     padding: 0;
+
+    &--phone {
+      padding-bottom: 12px;
+    }
   }
 
-  .forms__choice--radio {
+  .forms__radio {
+    padding-bottom: 0;
+    padding-right: 50px;
     padding-left: 75px;
-    padding-bottom: 10px;
+
+    &--positive {
+      padding-bottom: 55px;
+    }
+
+    &--unsatisfied {
+      padding-bottom: 55px;
+    }
   }
 
-  .forms__choice--box {
+  .forms__box {
     min-width: 202px;
     padding: 0;
     padding-bottom: 65px;
@@ -458,15 +572,20 @@
   }
 
   .forms__container--comments {
-    margin-right: 60px;
-    margin-left: 60px;
-    margin-top: 60px;
+    margin: 0;
+    margin-top: 57px;
+  }
+
+  .forms__comments {
+    padding-top: 14px;
+    padding-left: 18px;
   }
 
   .forms__feedback {
     margin-left: 60px;
     margin-right: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 97px;
+    margin-top: 60px;
     justify-content: space-between;
   }
 
@@ -482,5 +601,151 @@
     .text-styles(14px);
     flex-grow: 0;
     align-self: center;
+  }
+}
+
+@media (min-width: @tablet-width-only) {
+  .forms__title--sights {
+    width: 415px;
+  }
+
+  .forms__item--sights::before {
+    top: 33px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .forms {
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+
+  .forms__list {
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+
+  .forms__title {
+    &--main {
+      padding-top: 113px;
+    }
+
+    &--opinions {
+      padding-left: 77px;
+    }
+
+    &--contacts {
+      padding-bottom: 60px;
+    }
+
+    &--sights {
+      width: 280px;
+    }
+  }
+
+  .forms__intro {
+    padding-left: 380px;
+    padding-right: 381px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .forms__item {
+    &--id {
+      padding-left: 78px;
+    }
+
+    &--contacts {
+      padding-bottom: 23px;
+    }
+
+    &--sights::before {
+      top: 44px;
+    }
+  }
+
+  .forms__wrapper {
+    &--contacts {
+      display: flex;
+    }
+
+    &--sights {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .forms__contact {
+    display: flex;
+
+    &--phone {
+      flex-basis: 50%;
+      padding-right: 79px;
+      box-sizing: border-box;
+    }
+
+    &--email {
+      flex-basis: 50%;
+    }
+  }
+
+  .forms__description {
+    &--phone {
+      padding: 0;
+      padding-right: 16px;
+      margin-top: 16px;
+    }
+
+    &--email {
+      padding: 0;
+      padding-right: 16px;
+    }
+  }
+
+  .forms__input {
+    &--phone {
+      margin-bottom: 0;
+    }
+  }
+
+  .forms__exclusion {
+    display: none;
+  }
+
+  .forms__box {
+    margin-right: 0;
+
+    &--devil {
+      width: 250px;
+      margin-right: 10px;
+    }
+
+    &--bell {
+      width: 245px;
+      margin-right: 10px;
+    }
+
+    &--park {
+      width: 230px;
+      margin-right: 10px;
+    }
+
+    &--mountains {
+      width: 203px;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  .forms__feedback {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 103px;
+  }
+
+  .forms__button {
+    flex-basis: 50%;
+    padding-left: 70px;
   }
 }
