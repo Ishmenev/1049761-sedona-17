@@ -685,12 +685,18 @@
 
     &--phone {
       flex-basis: 50%;
-      padding-right: 79px;
-      box-sizing: border-box;
     }
 
     &--email {
       flex-basis: 50%;
+    }
+  }
+
+  .forms__container--phone {
+    padding-right: 79px;
+
+    &::after {
+      right: 79px;
     }
   }
 
