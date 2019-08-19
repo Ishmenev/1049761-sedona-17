@@ -91,8 +91,7 @@ return gulp.src([
 "source/fonts/**/*.{woff,woff2}",
 "source/img/**",
 "source/js/**",
-"source/ico/**",
-"source/css/normalize.css"
+"source/ico/**"
 ], {
 base: "source"
 })
