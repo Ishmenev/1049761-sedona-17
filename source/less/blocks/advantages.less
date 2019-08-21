@@ -137,13 +137,6 @@
   margin-left: -100px;
 }
 
-.advantages__container--border {
-  display: block;
-  width: 320px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .offers-list {
   .list-reset;
   padding-top: 36px;
@@ -194,6 +187,10 @@
   padding: 0;
 }
 
+.offers-list__nochinese {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .advantages {
     padding-top: 51px;
@@ -209,8 +206,8 @@
     }
 
     &--town {
-      padding-left: 49px;
-      padding-right: 41px;
+      padding-left: 48px;
+      padding-right: 44px;
     }
 
     &--bridge {
@@ -232,17 +229,18 @@
     &--bridge {
       display: flex;
     }
-  }
 
-  .advantages__container--border {
-    display: none;
+    &--wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 
   .advantages__wrapper {
     height: 256px;
 
     &--town {
-      flex-basis: 33%;
+      flex-basis: 33.4%;
       padding: 0;
       padding-top: 45px;
       box-sizing: border-box;
@@ -253,7 +251,7 @@
     }
 
     &--bridge {
-      flex-basis: 33%;
+      flex-basis: 33.4%;
       padding: 0;
       padding-top: 43px;
       box-sizing: border-box;
@@ -295,6 +293,25 @@
     &--bridge {
       padding-left: 30px;
       padding-right: 31px;
+    }
+
+    &--area {
+      padding-left: 49px;
+      padding-right: 48px;
+    }
+
+    &--road {
+      padding-left: 54px;
+      padding-right: 56px;
+    }
+
+    &--tourists {
+      padding-left: 54px;
+      padding-right: 53px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
@@ -363,52 +380,26 @@
     &--house {
       .size(75px, 72px);
       left: 0;
-      top: -104px;
+      top: -98px;
     }
 
     &--gifts {
       .size(64px, 75px);
       left: 20px;
-      top: -108px;
+      top: -100px;
     }
 
     &--food {
       .size(77px, 68px);
-      left: -22px;
+      left: -20px;
       top: -98px;
     }
-  }
-
-  .advantages__item--wrapper {
-    display: flex;
-    flex-wrap: nowrap;
   }
 
   .advantages__title--sub {
     width: 160px;
     margin: 0 auto;
     color: @black;
-  }
-
-  .advantages__description {
-    &--area {
-      padding-left: 49px;
-      padding-right: 48px;
-    }
-
-    &--road {
-      padding-left: 54px;
-      padding-right: 56px;
-    }
-
-    &--tourists {
-      padding-left: 54px;
-      padding-right: 53px;
-    }
-
-    &::after {
-      display: none;
-    }
   }
 }
 
@@ -537,5 +528,9 @@
       padding-right: 77px;
       box-sizing: border-box;
     }
+  }
+
+  .offers-list__nochinese {
+    display: inline-block;
   }
 }

@@ -142,8 +142,8 @@
 
   &--comments {
     margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 16px;
+    margin-top: 13px;
   }
 }
 
@@ -169,6 +169,10 @@
 
   &--email {
     margin-top: 10px;
+  }
+
+  &::placeholder {
+    color: @black;
   }
 
   &:hover {
@@ -290,18 +294,23 @@
 }
 
 .forms__comments {
-  width: calc(100% - 51px);
+  width: 100%;
   margin: 0;
   padding-left: 21px;
   padding-right: 30px;
   padding-top: 16px;
   padding-bottom: 22px;
+  box-sizing: border-box;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
   .text-styles(18px, @black);
   font-weight: bold;
   text-transform: none;
   cursor: pointer;
+
+  &::placeholder {
+    color: @black;
+  }
 
   &:hover {
     background-color: rgb(229, 229, 229);
@@ -357,7 +366,8 @@
 
     &--main {
       .text-styles(30px);
-      padding-top: 78px;
+      padding-top: 74px;
+      margin-bottom: 31px;
     }
 
     &--id {
@@ -586,7 +596,7 @@
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 97px;
-    margin-top: 60px;
+    margin-top: 57px;
     justify-content: space-between;
   }
 
@@ -682,14 +692,7 @@
 
   .forms__contact {
     display: flex;
-
-    &--phone {
-      flex-basis: 50%;
-    }
-
-    &--email {
-      flex-basis: 50%;
-    }
+    flex-basis: 50%;
   }
 
   .forms__container--phone {
