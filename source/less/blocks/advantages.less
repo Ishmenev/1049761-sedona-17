@@ -44,12 +44,10 @@
     .text-styles(14px, @white);
     padding-top: 80px;
     padding-bottom: 41px;
-    padding-right: 28px;
-    padding-left: 27px;
     box-sizing: border-box;
     position: relative;
 
-    /*&::before {
+    &::before {
       .alter;
       top: 0;
       left: 0;
@@ -58,7 +56,8 @@
       background-image: url("../img/bg-triangle.svg");
       background-position: center 0;
       background-repeat: no-repeat;
-    }*/
+      z-index: 10;
+    }
   }
 
   &--bridge {
@@ -66,8 +65,6 @@
     .text-styles(14px, @white);
     padding-top: 40px;
     padding-bottom: 42px;
-    padding-left: 30px;
-    padding-right: 31px;
     box-sizing: border-box;
   }
 
@@ -107,6 +104,16 @@
   line-height: 22px;
   position: relative;
 
+  &--town {
+    padding-right: 28px;
+    padding-left: 27px;
+  }
+
+  &--bridge {
+    padding-left: 30px;
+    padding-right: 31px;
+  }
+
   &--area::after,
   &--road::after {
     .alter;
@@ -128,13 +135,6 @@
 
 .advantages__picture--bridge {
   margin-left: -100px;
-}
-
-.advantages__container--border {
-  display: block;
-  width: 320px;
-  margin: 0 auto;
-  position: relative;
 }
 
 .offers-list {
@@ -187,6 +187,10 @@
   padding: 0;
 }
 
+.offers-list__nochinese {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .advantages {
     padding-top: 51px;
@@ -199,6 +203,11 @@
       padding-left: 139px;
       padding-right: 139px;
       .text-styles(21px, @black);
+    }
+
+    &--town {
+      padding-left: 48px;
+      padding-right: 44px;
     }
 
     &--bridge {
@@ -220,21 +229,20 @@
     &--bridge {
       display: flex;
     }
-  }
 
-  .advantages__container--border {
-    display: none;
+    &--wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 
   .advantages__wrapper {
-    min-height: 256px;
+    height: 256px;
 
     &--town {
-      flex-basis: 33%;
+      flex-basis: 33.4%;
       padding: 0;
       padding-top: 45px;
-      padding-left: 49px;
-      padding-right: 41px;
       box-sizing: border-box;
 
       &::before {
@@ -243,11 +251,9 @@
     }
 
     &--bridge {
-      flex-basis: 33%;
+      flex-basis: 33.4%;
       padding: 0;
       padding-top: 43px;
-      padding-left: 30px;
-      padding-right: 31px;
       box-sizing: border-box;
       order: 1;
     }
@@ -276,6 +282,37 @@
 
   .advantages__number {
     padding-bottom: 20px;
+  }
+
+  .advantages__description {
+    &--town {
+      padding-left: 49px;
+      padding-right: 41px;
+    }
+
+    &--bridge {
+      padding-left: 30px;
+      padding-right: 31px;
+    }
+
+    &--area {
+      padding-left: 49px;
+      padding-right: 48px;
+    }
+
+    &--road {
+      padding-left: 54px;
+      padding-right: 56px;
+    }
+
+    &--tourists {
+      padding-left: 54px;
+      padding-right: 53px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .advantages__container {
@@ -343,52 +380,26 @@
     &--house {
       .size(75px, 72px);
       left: 0;
-      top: -104px;
+      top: -98px;
     }
 
     &--gifts {
       .size(64px, 75px);
       left: 20px;
-      top: -108px;
+      top: -100px;
     }
 
     &--food {
       .size(77px, 68px);
-      left: -22px;
+      left: -20px;
       top: -98px;
     }
-  }
-
-  .advantages__item--wrapper {
-    display: flex;
-    flex-wrap: nowrap;
   }
 
   .advantages__title--sub {
     width: 160px;
     margin: 0 auto;
     color: @black;
-  }
-
-  .advantages__description {
-    &--area {
-      padding-left: 49px;
-      padding-right: 48px;
-    }
-
-    &--road {
-      padding-left: 54px;
-      padding-right: 56px;
-    }
-
-    &--tourists {
-      padding-left: 54px;
-      padding-right: 53px;
-    }
-
-    &::after {
-      display: none;
-    }
   }
 }
 
@@ -414,6 +425,13 @@
     &--town {
       width: 200px;
       margin: 0 auto;
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &--bridge {
+      padding-left: 90px;
+      padding-right: 90px;
     }
 
     &--sub {
@@ -428,15 +446,11 @@
       padding: 0;
       padding-top: 53px;
       padding-bottom: 56px;
-      padding-left: 65px;
-      padding-right: 65px;
     }
 
     &--bridge {
       padding: 0;
       padding-top: 54px;
-      padding-left: 90px;
-      padding-right: 90px;
     }
 
     &--area {
@@ -464,8 +478,19 @@
     }
   }
 
+  .advantages__description {
+    &--town {
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &--bridge {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+  }
+
   .advantages__container {
-    .size(800px, 256px);
     overflow: hidden;
   }
 
@@ -503,5 +528,9 @@
       padding-right: 77px;
       box-sizing: border-box;
     }
+  }
+
+  .offers-list__nochinese {
+    display: inline-block;
   }
 }

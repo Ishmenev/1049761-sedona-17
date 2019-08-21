@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная страница Седона</title>
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.min.css">
       </head>
       <body>
@@ -68,7 +69,7 @@
               </li>
             </ul>
             <div class="main-nav__menu">
-              <a class="main-nav__logo" target="_blank" href="https://htmlacademy.ru/intensive/adaptive">
+              <a class="main-nav__logo" target="_blank" href="index.html">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
                   <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -79,8 +80,9 @@
             </div>
           </nav>
         </header>
-      <main class="page-inner">
-        <section class="inner-intro">
+        <main class="page-inner">
+          <section class="inner-intro">
+            <h2 class="visually-hidden page-intro__title">Главное меню</h2>
             <img class="inner-intro__text" src="img/text-sedona.svg" width="229" height="39" alt="Изображение Седоны">
           </section>
           <section class="forms">
@@ -89,22 +91,22 @@
             <form class="forms__menu" action="#" method="get">
               <div class="forms__list">
                 <div class="forms__item forms__item--id">
-                  <legend class="forms__title forms__title--id">Представьтесь:</legend>
+                  <h3 class="forms__title forms__title--id">Представьтесь:</h3>
                   <ul class="forms__wrapper forms__wrapper--id">
                     <li class="forms__id forms__id--name">
-                      <label class="forms__description forms__description--name" id="username">Имя*:</label>
+                      <label class="forms__description" for="username">Имя*:</label>
                       <div class="forms__container">
                         <input type="text" class="forms__input" id="username" name="user-name" placeholder="Петр" required="">
                       </div>
                     </li>
                     <li class="forms__id forms__id--lastname">
-                      <label class="forms__description forms__description--lastname" id="lastname">Фамилия*:</label>
+                      <label class="forms__description" for="lastname">Фамилия*:</label>
                       <div class="forms__container">
                         <input type="text" class="forms__input" id="lastname" name="user-lastname" placeholder="Иванов" required="">
                       </div>
                     </li>
                     <li class="forms__id forms__id--fathername">
-                      <label class="forms__description forms__description--fathername" id="fathername">Отчество:</label>
+                      <label class="forms__description" for="fathername">Отчество:</label>
                         <div class="forms__container">
                           <input type="text" class="forms__input" id="fathername" name="user-fathertname" placeholder="Александрович">
                         </div>
@@ -112,16 +114,16 @@
                   </ul>
                 </div>
                 <div class="forms__item forms__item--contacts">
-                  <legend class="forms__title forms__title--contacts">Контактная информация:</legend>
+                  <h3 class="forms__title forms__title--contacts">Контактная информация:</h3>
                   <ul class="forms__wrapper forms__wrapper--contacts">
                     <li class="forms__contact forms__contact--phone">
-                      <label class="forms__description forms__description--phone" id="phone"><span class="forms__exclusion">Контактный</span> телефон*:</label>
+                      <label class="forms__description forms__description--phone" for="phone"><span class="forms__exclusion">Контактный</span> телефон*:</label>
                       <div class="forms__container forms__container--phone">
                         <input type="tel" class="forms__input forms__input--phone" name="user-phone" id="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{10}" required="">
                       </div>
                     </li>
                     <li class="forms__contact forms__contact--email">
-                      <label class="forms__description forms__description--email" id="email">Электронная почта*:</label>
+                      <label class="forms__description forms__description--email" for="email">Электронная почта*:</label>
                       <div class="forms__container forms__container--email">
                         <input type="email" class="forms__input forms__input--email" name="user-email" id="email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="">
                       </div>
@@ -129,24 +131,24 @@
                   </ul>
                 </div>
                 <div class="forms__item forms__item--opinions">
-                  <legend class="forms__title forms__title--opinions">Ваше общее впечатление:</legend>
+                  <h3 class="forms__title forms__title--opinions">Ваше общее впечатление:</h3>
                   <ul class="forms__wrapper forms__wrapper--opinions">
                     <li class="forms__radio forms__radio--positive">
-                      <label class="forms__opinion forms__opinion--satisfied">
+                      <label class="forms__opinion">
                         <input class="visually-hidden forms__filter" type="radio" name="user-opinion" checked="checked">
                         <span class="forms__indicator forms__indicator--radio"></span>
                         <span class="forms__option">Скорее положительное</span>
                     </label>
                     </li>
                     <li class="forms__radio forms__radio--unsatisfied">
-                      <label class="forms__opinion forms__opinion--unsatisfied">
+                      <label class="forms__opinion">
                         <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
                         <span class="forms__indicator forms__indicator--radio"></span>
                         <span class="forms__option">Скорее отрицательное</span>
                     </label>
                     </li>
-                    <li class="forms__radio forms__radio--noidea">
-                      <label class="forms__opinion forms__opinion--noidea">
+                    <li class="forms__radio">
+                      <label class="forms__opinion">
                         <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
                         <span class="forms__indicator forms__indicator--radio"></span>
                         <span class="forms__option">Затрудняюсь ответить</span>
@@ -155,7 +157,7 @@
                   </ul>
                 </div>
                 <div class="forms__item forms__item--sights">
-                  <legend class="forms__title forms__title--sights">Посещенные достопримечательности:</legend>
+                  <h3 class="forms__title forms__title--sights">Посещенные достопримечательности:</h3>
                   <ul class="forms__wrapper forms__wrapper--sights">
                     <li class="forms__box forms__box--devil">
                       <label class="forms__place">
@@ -188,9 +190,9 @@
                   </ul>
                 </div>
                 <div class="forms__item forms__item--comments">
-                  <legend class="forms__title forms__title--comments">Опишите свои эмоции:</legend>
+                  <h3 class="forms__title forms__title--comments">Опишите свои эмоции:</h3>
                   <div class="forms__container forms__container--comments">
-                    <textarea class="forms__comments" rows="5" cols="28" placeholder="Опишите подробно все свои восторги"></textarea>
+                    <textarea class="forms__comments" rows="5" cols="27" placeholder="Опишите подробно все свои восторги"></textarea>
                   </div>
                 </div>
               </div>
@@ -198,19 +200,19 @@
                 <input class="forms__button" type="submit" value="Отправить отзыв">
                 <span class="forms__requirements">* - обязательные поля</span>
               </div>
-              </form>
+            </form>
           </section>
         </main>
         <footer>
             <div class="footer-page">
             <h2 class="footer-page__title">#visitSedona</h2>
             <div class="footer-page__social">
-              <span><a class="footer-page__link footer-page__link--twitter" href="#"></a></span>
-              <span><a class="footer-page__link footer-page__link--facebook" href="#"></a></span>
-              <span><a class="footer-page__link footer-page__link--youtube" href="#"></a></span>
+              <span><a class="footer-page__link footer-page__link--twitter" href="#" aria-label="Седона в Твиттере"></a></span>
+              <span><a class="footer-page__link footer-page__link--facebook" href="#" aria-label="Седона на Фейсбуке"></a></span>
+              <span><a class="footer-page__link footer-page__link--youtube" href="#" aria-label="Седона в Ютьюбе"></a></span>
             </div>
             <a class="footer-page__sign" target="_blank" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на адрес HTML Академии">Разработано
-              <svg class="footer-page__icon footer-page__icon--academy" width="27" height="34">
+              <svg class="footer-page__icon" width="27" height="34">
                   <use xlink:href="#icon-sprite-academy"></use>
               </svg>
             </a>
