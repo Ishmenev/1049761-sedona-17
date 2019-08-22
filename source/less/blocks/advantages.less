@@ -5,6 +5,7 @@
 .advantages__title {
   font-size: 18px;
   margin: 0;
+  line-height: 26px;
 }
 
 .advantages__title--main {
@@ -18,7 +19,7 @@
 
 .advantages__anounce {
   .text-styles(14px, @black);
-  line-height: 25px;
+  line-height: 24px;
   margin: 0;
   margin-top: 27px;
   padding-left: 32px;
@@ -101,17 +102,18 @@
 
 .advantages__description {
   margin: 0;
-  line-height: 22px;
   position: relative;
 
   &--town {
     padding-right: 28px;
     padding-left: 27px;
+    line-height: 15px;
   }
 
   &--bridge {
     padding-left: 30px;
     padding-right: 31px;
+    line-height: 15px;
   }
 
   &--area::after,
@@ -135,60 +137,6 @@
 
 .advantages__picture--bridge {
   margin-left: -100px;
-}
-
-.offers-list {
-  .list-reset;
-  padding-top: 36px;
-}
-
-.offers-list__item {
-  padding-left: 70px;
-  padding-right: 40px;
-  padding-bottom: 30px;
-  .text-styles(14px);
-
-  &--food {
-    padding-bottom: 38px;
-  }
-}
-
-.offers-list__title {
-  display: inline-block;
-  .text-styles(18px);
-  font-weight: bold;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.offers-list__icon {
-  position: absolute;
-  fill: @blue;
-
-  &--house {
-    left: -50px;
-    top: -10px;
-  }
-
-  &--gifts {
-    left: -46px;
-    top: -13px;
-  }
-
-  &--food {
-    left: -50px;
-    top: -6px;
-  }
-}
-
-.offers-list__text {
-  line-height: 21px;
-  margin: 0;
-  padding: 0;
-}
-
-.offers-list__nochinese {
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -220,6 +168,7 @@
     padding-left: 139px;
     padding-right: 139px;
     padding-bottom: 45px;
+    line-height: 26px;
   }
 
   .advantages__item {
@@ -237,7 +186,7 @@
   }
 
   .advantages__wrapper {
-    height: 256px;
+    min-height: 256px;
 
     &--town {
       flex-basis: 33.4%;
@@ -288,11 +237,13 @@
     &--town {
       padding-left: 49px;
       padding-right: 41px;
+      line-height: 21px;
     }
 
     &--bridge {
       padding-left: 30px;
       padding-right: 31px;
+      line-height: 21px;
     }
 
     &--area {
@@ -329,72 +280,6 @@
     }
   }
 
-  .offers-list {
-    margin: 0;
-    padding: 0;
-    padding-top: 158px;
-    padding-bottom: 62px;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  }
-
-  .offers-list__item {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    &--houses {
-      order: 1;
-      min-width: 261px;
-      padding-left: 46px;
-      padding-right: 50px;
-      box-sizing: border-box;
-    }
-
-    &--gifts {
-      order: 3;
-      min-width: 269px;
-      padding-left: 44px;
-      padding-right: 52px;
-      box-sizing: border-box;
-    }
-
-    &--food {
-      order: 2;
-      min-width: 252px;
-      padding-left: 50px;
-      padding-right: 50px;
-      box-sizing: border-box;
-    }
-  }
-
-  .offers-list__title {
-    .text-styles(21px);
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  .offers-list__icon {
-    &--house {
-      .size(75px, 72px);
-      left: 0;
-      top: -98px;
-    }
-
-    &--gifts {
-      .size(64px, 75px);
-      left: 20px;
-      top: -100px;
-    }
-
-    &--food {
-      .size(77px, 68px);
-      left: -20px;
-      top: -98px;
-    }
-  }
 
   .advantages__title--sub {
     width: 160px;
@@ -497,40 +382,5 @@
   .advantages__picture {
     margin-top: -64px;
   }
-
-  .offers-list {
-    padding-bottom: 83px;
-  }
-
-  .offers-list__item {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    &--houses {
-      min-width: 392px;
-      padding-left: 69px;
-      padding-right: 68px;
-    }
-
-    &--gifts {
-      order: 3;
-      min-width: 383px;
-      padding-left: 73px;
-      padding-right: 94px;
-      box-sizing: border-box;
-    }
-
-    &--food {
-      order: 2;
-      min-width: 425px;
-      padding-left: 65px;
-      padding-right: 77px;
-      box-sizing: border-box;
-    }
-  }
-
-  .offers-list__nochinese {
-    display: inline-block;
-  }
 }
+

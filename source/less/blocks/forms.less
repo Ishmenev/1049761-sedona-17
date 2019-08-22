@@ -13,6 +13,10 @@
     text-align: center;
   }
 
+  &--id {
+    padding-bottom: 21px;
+  }
+
   &--contacts {
     padding-bottom: 25px;
   }
@@ -60,15 +64,11 @@
   position: relative;
 
   &--id {
-    padding-bottom: 25px;
+    padding-bottom: 4px;
   }
 
   &--contacts {
     padding-bottom: 28px;
-  }
-
-  &--opinions {
-    padding-bottom: 46px;
   }
 
   &--sights {
@@ -89,7 +89,7 @@
   display: flex;
   padding-left: 23px;
   padding-right: 20px;
-  margin-top: 21px;
+  padding-bottom: 21px;
 
   &--fathername {
     padding-left: 27px;
@@ -178,10 +178,12 @@
   &:hover {
     background-color: rgb(229, 229, 229);
     border: 4px solid rgb(229, 229, 229);
+    outline: 0;
   }
 
   &:focus {
     background-color: @white;
+    outline: 0;
   }
 }
 
@@ -209,14 +211,7 @@
   padding-left: 98px;
   padding-right: 37px;
   position: relative;
-
-  &--positive {
-    padding-bottom: 45px;
-  }
-
-  &--unsatisfied {
-    padding-bottom: 45px;
-  }
+  padding-bottom: 45px;
 }
 
 .forms__box {
@@ -315,11 +310,13 @@
   &:hover {
     background-color: rgb(229, 229, 229);
     border: 4px solid rgb(229, 229, 229);
+    outline: 0;
   }
 
   &:focus {
     background-color: @white;
     border: 4px solid rgb(242, 242, 242);
+    outline: 0;
   }
 }
 
@@ -445,7 +442,7 @@
         top: 4px;
         right: 0;
         width: 1px;
-        height: 292px;
+        height: calc(100% - 40px);
         background-color: rgb(214, 214, 214);
       }
     }
@@ -506,10 +503,6 @@
     padding: 0;
     margin: 0;
 
-    &--opinions {
-      padding-bottom: 60px;
-    }
-
     &--sights {
       position: relative;
       margin-left: 93px;
@@ -527,15 +520,8 @@
   .forms__id {
     padding: 0;
     padding-left: 58px;
+    padding-bottom: 20px;
     margin: 0;
-
-    &--name {
-      padding-bottom: 20px;
-    }
-
-    &--lastname {
-      padding-bottom: 20px;
-    }
   }
 
   .forms__input {
@@ -554,14 +540,7 @@
     padding-bottom: 0;
     padding-right: 50px;
     padding-left: 75px;
-
-    &--positive {
-      padding-bottom: 55px;
-    }
-
-    &--unsatisfied {
-      padding-bottom: 55px;
-    }
+    padding-bottom: 55px;
   }
 
   .forms__box {
