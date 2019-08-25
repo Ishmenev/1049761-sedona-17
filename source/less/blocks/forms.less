@@ -8,13 +8,14 @@
   text-align: center;
 
   &--main {
-    padding-top: 40px;
+    padding-top: 38px;
     margin-bottom: 27px;
     text-align: center;
   }
 
   &--id {
-    padding-bottom: 21px;
+    padding-top: 19px;
+    padding-bottom: 22px;
   }
 
   &--contacts {
@@ -22,14 +23,18 @@
   }
 
   &--opinions {
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
 
   &--sights {
-    padding-top: 19px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  &--comments {
+    padding-top: 19px;
+    padding-bottom: 17px;
   }
 }
 
@@ -87,13 +92,9 @@
 
 .forms__id {
   display: flex;
-  padding-left: 23px;
+  padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 21px;
-
-  &--fathername {
-    padding-left: 27px;
-  }
+  padding-bottom: 20px;
 }
 
 .forms__contact {
@@ -103,7 +104,11 @@
 
 .forms__container {
   flex-grow: 1;
-  margin-left: 12px;
+  margin-left: 14px;
+
+  &--fathername {
+    margin-left: 17px;
+  }
 
   &--phone {
     width: auto;
@@ -143,7 +148,6 @@
   &--comments {
     margin-right: 20px;
     margin-left: 16px;
-    margin-top: 13px;
   }
 }
 
@@ -151,8 +155,9 @@
   width: 100%;
   height: 58px;
   margin: 0;
-  padding-left: 23px;
+  padding-left: 17px;
   padding-right: 20px;
+  padding-bottom: 5px;
   box-sizing: border-box;
   border: 4px solid rgb(242, 242, 242);
   background-color: rgb(242, 242, 242);
@@ -293,7 +298,7 @@
   margin: 0;
   padding-left: 21px;
   padding-right: 30px;
-  padding-top: 16px;
+  padding-top: 11px;
   padding-bottom: 22px;
   box-sizing: border-box;
   border: 4px solid rgb(242, 242, 242);
@@ -305,6 +310,7 @@
 
   &::placeholder {
     color: @black;
+    line-height: 26px;
   }
 
   &:hover {
@@ -384,26 +390,27 @@
     }
 
     &--contacts {
-      padding-top: 27px;
+      padding-top: 32px;
       padding-left: 60px;
       padding-right: 60px;
-      padding-bottom: 27px;
+      padding-bottom: 28px;
       width: 280px;
       background-color: white;
       z-index: 5;
     }
 
     &--sights {
-      padding-left: 57px;
-      padding-right: 63px;
+      padding-left: 58px;
+      padding-right: 62px;
       padding-bottom: 0;
+      padding-top: 18px;
       width: 280px;
       background-color: @white;
       z-index: 10;
     }
 
     &--comments {
-      padding-top: 19px;
+      padding-top: 22px;
       padding-left: 71px;
       padding-right: 73px;
       width: 255px;
@@ -460,7 +467,7 @@
 
       &::before {
         .alter;
-        top: 37px;
+        top: 43px;
         width: 100%;
         height: 1px;
         background-color: rgb(214, 214, 214);
@@ -475,7 +482,7 @@
 
       &::before {
         .alter;
-        top: 44px;
+        top: 43px;
         width: 100%;
         height: 1px;
         background-color: rgb(214, 214, 214);
@@ -506,7 +513,7 @@
     &--sights {
       position: relative;
       margin-left: 93px;
-      margin-top: 56px;
+      margin-top: 58px;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
@@ -537,7 +544,6 @@
   }
 
   .forms__radio {
-    padding-bottom: 0;
     padding-right: 50px;
     padding-left: 75px;
     padding-bottom: 55px;
@@ -546,8 +552,8 @@
   .forms__box {
     min-width: 202px;
     padding: 0;
-    padding-bottom: 65px;
-    padding-left: 79px;
+    padding-bottom: 64px;
+    padding-left: 80px;
     box-sizing: border-box;
     margin-right: 55px;
   }
@@ -563,11 +569,11 @@
 
   .forms__container--comments {
     margin: 0;
-    margin-top: 57px;
+    margin-top: 40px;
   }
 
   .forms__comments {
-    padding-top: 14px;
+    padding-top: 12px;
     padding-left: 18px;
   }
 
@@ -617,11 +623,12 @@
 
   .forms__title {
     &--main {
-      padding-top: 113px;
+      padding-top: 111px;
     }
 
     &--opinions {
       padding-left: 77px;
+      padding-bottom: 73px;
     }
 
     &--id {
@@ -629,11 +636,15 @@
     }
 
     &--contacts {
-      padding-bottom: 60px;
+      padding-bottom: 63px;
     }
 
     &--sights {
       width: 280px;
+    }
+
+    &--comments {
+      padding-top: 19px;
     }
   }
 
@@ -701,6 +712,14 @@
     }
   }
 
+  .forms__radio {
+    padding-left: 79px;
+  }
+
+  .forms__indicator--radio {
+    left: 4px;
+  }
+
   .forms__exclusion {
     display: none;
   }
@@ -733,7 +752,7 @@
   .forms__feedback {
     width: 960px;
     margin: 0 auto;
-    margin-top: 55px;
+    margin-top: 57px;
     margin-bottom: 103px;
   }
 
