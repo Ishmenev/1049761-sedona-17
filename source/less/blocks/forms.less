@@ -73,7 +73,7 @@
   }
 
   &--contacts {
-    padding-bottom: 28px;
+    padding-bottom: 12px;
   }
 
   &--sights {
@@ -174,6 +174,7 @@
 
   &--email {
     margin-top: 10px;
+    margin-bottom: 16px;
   }
 
   &::placeholder {
@@ -463,7 +464,7 @@
       flex-basis: 100%;
       order: 3;
       position: relative;
-      padding-bottom: 35px;
+      
 
       &::before {
         .alter;
@@ -510,6 +511,10 @@
     padding: 0;
     margin: 0;
 
+    &--contacts {
+      padding-bottom: 6px;
+    }
+
     &--sights {
       position: relative;
       margin-left: 93px;
@@ -533,14 +538,18 @@
 
   .forms__input {
     padding-left: 18px;
+
+    &--phone {
+      margin-bottom: 28px;
+    }
+
+    &--email {
+      margin-bottom: 28px;
+    }
   }
 
   .forms__contact {
     padding: 0;
-
-    &--phone {
-      padding-bottom: 12px;
-    }
   }
 
   .forms__radio {
@@ -655,19 +664,15 @@
     padding-bottom: 60px;
   }
 
-  .forms__item {
-    &--contacts {
-      padding-bottom: 23px;
-    }
-
-    &--sights::before {
-      top: 44px;
-    }
+  .forms__item--sights::before {
+    top: 44px;
   }
 
   .forms__wrapper {
     &--contacts {
       display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 7px;
     }
 
     &--sights {
@@ -697,12 +702,13 @@
     &--phone {
       padding: 0;
       padding-right: 16px;
-      margin-top: 16px;
+      margin-bottom: 16px;
     }
 
     &--email {
       padding: 0;
       padding-right: 16px;
+      margin-bottom: 16px;
     }
   }
 

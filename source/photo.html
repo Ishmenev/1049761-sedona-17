@@ -172,18 +172,26 @@
             <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="201" alt="Автомобильная дорога в Седону">
           </picture>
           <div class="video__menu">
-            <div class="video__scroll">
-              <span class="video__line"></span>
-            </div>
-            <svg class="video__symbol video__symbol--replay" width="16" height="20">
-              <use xlink:href="#icon-sprite-replay"></use>
-            </svg>
-            <svg class="video__symbol video__symbol--subtitles" width="32" height="20">
-              <use xlink:href="#icon-sprite-subtitles"></use>
-            </svg>
-            <svg class="video__symbol video__symbol--fullscreen" width="20" height="20">
-              <use xlink:href="#icon-sprite-fullscreen"></use>
-            </svg>
+            <button type="button" class="video__button video__button--scroll">
+              <div class="video__scroll">
+                <span class="video__line"></span>
+              </div>
+            </button>
+            <button type="button" class="video__button video__button--replay">
+              <svg class="video__symbol video__symbol--replay" width="16" height="20">
+                <use xlink:href="#icon-sprite-replay"></use>
+              </svg>
+            </button>
+            <button type="button" class="video__button video__button--subtitles">
+              <svg class="video__symbol video__symbol--subtitles" width="32" height="20">
+                <use xlink:href="#icon-sprite-subtitles"></use>
+              </svg>
+            </button>
+            <button type="button" class="video__button video__button--fullscreen">
+              <svg class="video__symbol video__symbol--fullscreen" width="20" height="20">
+                <use xlink:href="#icon-sprite-fullscreen"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
