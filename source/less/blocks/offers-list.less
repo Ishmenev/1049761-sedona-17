@@ -1,57 +1,57 @@
 .offers-list {
-    .list-reset;
-    padding-top: 36px;
+  .list-reset;
+  padding-top: 36px;
+}
+
+.offers-list__item {
+  padding-bottom: 30px;
+  padding-left: 70px;
+  .text-styles(14px);
+
+  &--food {
+    padding-bottom: 38px;
   }
-  
-  .offers-list__item {
-    padding-bottom: 30px;
-    padding-left: 70px;
-    .text-styles(14px);
-  
-    &--food {
-      padding-bottom: 38px;
-    }
+}
+
+.offers-list__title {
+  display: inline-block;
+  .text-styles(18px);
+  font-weight: bold;
+  padding-right: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.offers-list__icon {
+  position: absolute;
+  fill: @blue;
+
+  &--house {
+    left: -50px;
+    top: -10px;
   }
-  
-  .offers-list__title {
-    display: inline-block;
-    .text-styles(18px);
-    font-weight: bold;
-    padding-right: 40px;
-    margin-bottom: 15px;
-    position: relative;
+
+  &--gifts {
+    left: -46px;
+    top: -13px;
   }
-  
-  .offers-list__icon {
-    position: absolute;
-    fill: @blue;
-  
-    &--house {
-      left: -50px;
-      top: -10px;
-    }
-  
-    &--gifts {
-      left: -46px;
-      top: -13px;
-    }
-  
-    &--food {
-      left: -50px;
-      top: -6px;
-    }
+
+  &--food {
+    left: -50px;
+    top: -6px;
   }
-  
-  .offers-list__text {
-    line-height: 21px;
-    margin: 0;
-    padding: 0;
-    padding-right: 40px;
-  }
-  
-  .offers-list__nochinese {
-    display: none;
-  }
+}
+
+.offers-list__text {
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+}
+
+.offers-list__nochinese {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .offers-list {
