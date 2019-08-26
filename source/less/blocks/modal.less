@@ -15,8 +15,8 @@
 
 .modal--right {
   top: 130px;
-  width: 100%;
-  display: none;
+  width: 100%; 
+  display: none; 
 }
 
 .modal__wrapper {
@@ -52,8 +52,8 @@
   padding-bottom: 25px;
 
   &--right {
-    padding-left: 32px;
-    padding-right: 34px;
+    padding-left: 52px;
+    padding-right: 54px;
     padding-bottom: 35px;
   }
 }
@@ -76,11 +76,13 @@
 
   &:hover {
     background-color: rgb(102, 158, 192);
+    outline: 0;
   }
 
   &:active {
     background-color: rgb(84, 150, 189);
     color: rgba(255, 255, 255, 0.3);
+    outline: 0;
   }
 }
 
@@ -129,5 +131,15 @@
   .modal__close {
     padding-top: 44px;
     padding-bottom: 44px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal--error {
+    width: @desktop-width;
+  }
+  
+  .modal--right {
+    width: @desktop-width;
   }
 }

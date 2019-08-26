@@ -136,21 +136,21 @@
                 <li class="forms__radio forms__radio--positive">
                   <label class="forms__opinion">
                     <input class="visually-hidden forms__filter" type="radio" name="user-opinion" checked="checked">
-                    <span class="forms__indicator forms__indicator--radio"></span>
+                    <span class="forms__indicator forms__indicator--radio" tabindex="0"></span>
                     <span class="forms__option">Скорее положительное</span>
                 </label>
                 </li>
                 <li class="forms__radio forms__radio--unsatisfied">
                   <label class="forms__opinion">
                     <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
-                    <span class="forms__indicator forms__indicator--radio"></span>
+                    <span class="forms__indicator forms__indicator--radio" tabindex="0"></span>
                     <span class="forms__option">Скорее отрицательное</span>
                 </label>
                 </li>
                 <li class="forms__radio">
                   <label class="forms__opinion">
                     <input class="visually-hidden forms__filter" type="radio" name="user-opinion">
-                    <span class="forms__indicator forms__indicator--radio"></span>
+                    <span class="forms__indicator forms__indicator--radio" tabindex="0"></span>
                     <span class="forms__option">Затрудняюсь ответить</span>
                   </label>
                 </li>
@@ -162,28 +162,28 @@
                 <li class="forms__box forms__box--devil">
                   <label class="forms__place">
                     <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
-                    <span class="forms__indicator forms__indicator--box"></span>
+                    <span class="forms__indicator forms__indicator--box" tabindex="0"></span>
                     <span class="forms__option">Мост Дьявола</span>
                   </label>
                 </li>
                 <li class="forms__box forms__box--bell">
                   <label class="forms__place">
                     <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
-                    <span class="forms__indicator forms__indicator--box"></span>
+                    <span class="forms__indicator forms__indicator--box" tabindex="0"></span>
                     <span class="forms__option">Гора-Колокол</span>
                   </label>
                 </li>
                 <li class="forms__box forms__box--park">
                   <label class="forms__place">
                     <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
-                    <span class="forms__indicator forms__indicator--box"></span>
+                    <span class="forms__indicator forms__indicator--box" tabindex="0"></span>
                     <span class="forms__option">Слайд-парк</span>
                   </label>
                 </li>
                 <li class="forms__box forms__box--mountains">
                   <label class="forms__place">
                     <input class="visually-hidden forms__filter" type="checkbox" name="visited-place">
-                    <span class="forms__indicator forms__indicator--box"></span>
+                    <span class="forms__indicator forms__indicator--box" tabindex="0"></span>
                     <span class="forms__option">Красные скалы</span>
                   </label>
                 </li>
@@ -220,24 +220,24 @@
     </footer>
     <div class="modal modal--error">
       <div class="modal__wrapper modal__wrapper--error">
-        <form class="modal-form" action="#" method="post">
+        <div class="modal-form">
           <h2 class="modal__title">Что-то пошло не так!</h2>
           <p class="modal__announce modal__announce--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           <div class="modal__confirm">
-            <input class="modal__button modal__button--confirm" type="submit" name="send-form" value="ok">
+            <button type="button" class="modal__button modal__button--confirm">Ок</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
     <div class="modal modal--right">
       <div class="modal__wrapper modal__wrapper--right">
-        <form class="modal-form" action="#" method="post">
+        <div class="modal-form">
           <h2 class="modal__title">Ваш отзыв отправлен!</h2>
           <p class="modal__announce modal__announce--right">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
           <div class="modal__close">
-            <input class="modal__button modal__button--close" type="submit" name="send-form" value="Закрыть окно">
+            <button type="button" class="modal__button modal__button--close">Закрыть окно</buttuon>
           </div>
-        </form>
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>
