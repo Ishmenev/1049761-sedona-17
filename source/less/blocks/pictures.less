@@ -79,7 +79,7 @@
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.picutes__likes {
+.pictures__likes {
   .text-styles(14px);
   font-weight: bold;
   padding-left: 37px;
@@ -91,6 +91,7 @@
     left: 0;
     .size(23px, 21px);
     background-image: url("../img/icon-like.svg");
+    opacity: 0.3;
     background-repeat: no-repeat;
   }
 }
@@ -108,8 +109,8 @@
 
   .pictures__intro {
     margin-bottom: 68px;
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 
   .pictures__item--sunset::before {
@@ -202,7 +203,7 @@
     padding-bottom: 0;
   }
 
-  .picutes__likes {
+  .pictures__likes {
     margin-left: auto;
     line-height: 14px;
     align-content: flex-start;
@@ -231,8 +232,8 @@
 
   .pictures__intro {
     margin-bottom: 71px;
-    padding-left: 385px;
-    padding-right: 387px;
+    padding-left: 384px;
+    padding-right: 386px;
   }
 
   .pictures__list {
@@ -282,11 +283,12 @@
     color: @white;
   }
 
-  .picutes__likes {
+  .pictures__likes {
     color: @white;
 
     &::before {
       background-image: url("../img/icon-like-white.svg");
+      opacity: 1;
       background-repeat: no-repeat;
     }
   }

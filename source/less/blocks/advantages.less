@@ -1,10 +1,11 @@
 .advantages {
-  padding-top: 41px;
+  padding-top: 40px;
 }
 
 .advantages__title {
   font-size: 18px;
   margin: 0;
+  line-height: 26px;
 }
 
 .advantages__title--main {
@@ -18,12 +19,12 @@
 
 .advantages__anounce {
   .text-styles(14px, @black);
-  line-height: 25px;
+  line-height: 26px;
   margin: 0;
   margin-top: 27px;
   padding-left: 32px;
   padding-right: 33px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -42,8 +43,8 @@
   &--town {
     background-color: @blue;
     .text-styles(14px, @white);
-    padding-top: 80px;
-    padding-bottom: 41px;
+    padding-top: 78px;
+    padding-bottom: 38px;
     box-sizing: border-box;
     position: relative;
 
@@ -64,7 +65,7 @@
     background-color: @blue;
     .text-styles(14px, @white);
     padding-top: 40px;
-    padding-bottom: 42px;
+    padding-bottom: 38px;
     box-sizing: border-box;
   }
 
@@ -95,14 +96,14 @@
 
 .advantages__number {
   display: inline-block;
-  padding-top: 11px;
-  padding-bottom: 17px;
+  padding-top: 9px;
+  padding-bottom: 19px;
 }
 
 .advantages__description {
   margin: 0;
-  line-height: 22px;
   position: relative;
+  line-height: 21px;
 
   &--town {
     padding-right: 28px;
@@ -137,60 +138,6 @@
   margin-left: -100px;
 }
 
-.offers-list {
-  .list-reset;
-  padding-top: 36px;
-}
-
-.offers-list__item {
-  padding-left: 70px;
-  padding-right: 40px;
-  padding-bottom: 30px;
-  .text-styles(14px);
-
-  &--food {
-    padding-bottom: 38px;
-  }
-}
-
-.offers-list__title {
-  display: inline-block;
-  .text-styles(18px);
-  font-weight: bold;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.offers-list__icon {
-  position: absolute;
-  fill: @blue;
-
-  &--house {
-    left: -50px;
-    top: -10px;
-  }
-
-  &--gifts {
-    left: -46px;
-    top: -13px;
-  }
-
-  &--food {
-    left: -50px;
-    top: -6px;
-  }
-}
-
-.offers-list__text {
-  line-height: 21px;
-  margin: 0;
-  padding: 0;
-}
-
-.offers-list__nochinese {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .advantages {
     padding-top: 51px;
@@ -217,9 +164,10 @@
   }
 
   .advantages__anounce {
-    padding-left: 139px;
-    padding-right: 139px;
+    padding-left: 129px;
+    padding-right: 129px;
     padding-bottom: 45px;
+    line-height: 26px;
   }
 
   .advantages__item {
@@ -237,13 +185,15 @@
   }
 
   .advantages__wrapper {
-    height: 256px;
+    min-height: 256px;
 
     &--town {
       flex-basis: 33.4%;
+      height: 256px;
       padding: 0;
       padding-top: 45px;
       box-sizing: border-box;
+      overflow: hidden;
 
       &::before {
         display: none;
@@ -252,47 +202,54 @@
 
     &--bridge {
       flex-basis: 33.4%;
+      height: 256px;
       padding: 0;
       padding-top: 43px;
       box-sizing: border-box;
       order: 1;
+      overflow: hidden;
     }
 
     &--area {
       min-width: 256px;
       padding: 0;
-      padding-top: 42px;
+      padding-top: 45px;
+      padding-bottom: 15px;
       box-sizing: border-box;
     }
 
     &--road {
       min-width: 256px;
       padding: 0;
-      padding-top: 42px;
+      padding-top: 45px;
+      padding-bottom: 15px;
       box-sizing: border-box;
     }
 
     &--tourists {
       min-width: 256px;
       padding: 0;
-      padding-top: 42px;
+      padding-top: 45px;
+      padding-bottom: 15px;
       box-sizing: border-box;
     }
   }
 
   .advantages__number {
-    padding-bottom: 20px;
+    padding-bottom: 27px;
   }
 
   .advantages__description {
     &--town {
-      padding-left: 49px;
-      padding-right: 41px;
+      padding-left: 47px;
+      padding-right: 39px;
+      line-height: 21px;
     }
 
     &--bridge {
       padding-left: 30px;
       padding-right: 31px;
+      line-height: 21px;
     }
 
     &--area {
@@ -329,72 +286,6 @@
     }
   }
 
-  .offers-list {
-    margin: 0;
-    padding: 0;
-    padding-top: 158px;
-    padding-bottom: 62px;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  }
-
-  .offers-list__item {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    &--houses {
-      order: 1;
-      min-width: 261px;
-      padding-left: 46px;
-      padding-right: 50px;
-      box-sizing: border-box;
-    }
-
-    &--gifts {
-      order: 3;
-      min-width: 269px;
-      padding-left: 44px;
-      padding-right: 52px;
-      box-sizing: border-box;
-    }
-
-    &--food {
-      order: 2;
-      min-width: 252px;
-      padding-left: 50px;
-      padding-right: 50px;
-      box-sizing: border-box;
-    }
-  }
-
-  .offers-list__title {
-    .text-styles(21px);
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  .offers-list__icon {
-    &--house {
-      .size(75px, 72px);
-      left: 0;
-      top: -98px;
-    }
-
-    &--gifts {
-      .size(64px, 75px);
-      left: 20px;
-      top: -100px;
-    }
-
-    &--food {
-      .size(77px, 68px);
-      left: -20px;
-      top: -98px;
-    }
-  }
 
   .advantages__title--sub {
     width: 160px;
@@ -457,16 +348,16 @@
       width: 400px;
       padding: 0;
       padding-top: 44px;
-      padding-left: 8px;
-      padding-right: 11px;
+      padding-left: 7px;
+      padding-right: 10px;
     }
 
     &--road {
       width: 400px;
       padding: 0;
       padding-top: 44px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 13px;
+      padding-right: 13px;
     }
 
     &--tourists {
@@ -495,42 +386,7 @@
   }
 
   .advantages__picture {
-    margin-top: -64px;
-  }
-
-  .offers-list {
-    padding-bottom: 83px;
-  }
-
-  .offers-list__item {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    &--houses {
-      min-width: 392px;
-      padding-left: 69px;
-      padding-right: 68px;
-    }
-
-    &--gifts {
-      order: 3;
-      min-width: 383px;
-      padding-left: 73px;
-      padding-right: 94px;
-      box-sizing: border-box;
-    }
-
-    &--food {
-      order: 2;
-      min-width: 425px;
-      padding-left: 65px;
-      padding-right: 77px;
-      box-sizing: border-box;
-    }
-  }
-
-  .offers-list__nochinese {
-    display: inline-block;
+    margin-top: -76px;
   }
 }
+
