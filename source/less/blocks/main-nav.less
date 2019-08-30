@@ -41,7 +41,7 @@
 
 .main-nav__link {
   display: block;
-  .link-button(17px, 14px, @blue);
+  .link-button(14px, 14px, @blue);
   padding-right: 4px;
   .text-styles(18px, @white);
   line-height: 26px;
@@ -110,7 +110,9 @@
       color: rgb(129, 179, 210);
     }
 
+    &:focus,
     &:active {
+      background-color: @white;
       color: rgb(178, 178, 178);
     }
 
@@ -118,10 +120,13 @@
       color: rgb(130, 112, 101);
 
       &:hover {
+        background-color: @white;
         color: rgb(117, 101, 91);
       }
 
+      &:focus,
       &:active {
+        background-color: @white;
         color: rgb(215, 210, 207);
       }
     }
